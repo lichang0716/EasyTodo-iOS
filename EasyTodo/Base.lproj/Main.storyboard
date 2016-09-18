@@ -18,16 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ong-8h-Y8y">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="47l-5V-2IM">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ong-8h-Y8y">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ong-8h-Y8y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="IBt-db-U9q"/>
-                            <constraint firstItem="ong-8h-Y8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Kxe-wQ-9Ft"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ong-8h-Y8y" secondAttribute="bottom" id="75g-8P-X1G"/>
+                            <constraint firstItem="ong-8h-Y8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kxe-wQ-9Ft"/>
                             <constraint firstAttribute="trailing" secondItem="ong-8h-Y8y" secondAttribute="trailing" id="P7C-0s-a0a"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ong-8h-Y8y" secondAttribute="bottom" id="RxP-ZZ-vUt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="47l-5V-2IM" secondAttribute="bottom" id="VFu-Ju-2hs"/>
+                            <constraint firstItem="47l-5V-2IM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WBj-4T-CxH"/>
+                            <constraint firstItem="ong-8h-Y8y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XK5-V7-WeN"/>
+                            <constraint firstItem="47l-5V-2IM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dFm-BF-yCQ"/>
+                            <constraint firstAttribute="trailing" secondItem="47l-5V-2IM" secondAttribute="trailing" id="vaQ-U5-TNr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6y1-m2-1iL">
@@ -37,17 +44,19 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Todo"/>
-                                <segment title="Undo"/>
+                                <segment title="Done"/>
                             </segments>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="ItemFlagSwitch" destination="yko-ol-G8G" id="NUt-xs-F91"/>
+                        <outlet property="doneItemTableView" destination="ong-8h-Y8y" id="DyE-a7-Ght"/>
+                        <outlet property="itemFlagSwitch" destination="yko-ol-G8G" id="BlL-Fb-APB"/>
+                        <outlet property="todoItemTableView" destination="47l-5V-2IM" id="x0k-gM-3VM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="-544"/>
+            <point key="canvasLocation" x="965.60000000000002" y="-545.57721139430294"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mcj-vw-Uln">

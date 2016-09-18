@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C3C15C01D8EC04D004DBEEF /* DoneItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */; };
+		5C3C15C31D8EC0BF004DBEEF /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15C21D8EC0BF004DBEEF /* Util.m */; };
 		5C7385771D8D07B20065CE41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7385761D8D07B20065CE41 /* main.m */; };
 		5C73857A1D8D07B20065CE41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7385791D8D07B20065CE41 /* AppDelegate.m */; };
 		5C73857D1D8D07B20065CE41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C73857C1D8D07B20065CE41 /* ViewController.m */; };
 		5C7385801D8D07B20065CE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C73857E1D8D07B20065CE41 /* Main.storyboard */; };
 		5C7385821D8D07B20065CE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7385811D8D07B20065CE41 /* Assets.xcassets */; };
 		5C7385851D8D07B20065CE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7385831D8D07B20065CE41 /* LaunchScreen.storyboard */; };
+		5C9493241D8EB9FA002A7EB4 /* TodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9493231D8EB9FA002A7EB4 /* TodoItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneItemGroup.h; sourceTree = "<group>"; };
+		5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneItemGroup.m; sourceTree = "<group>"; };
+		5C3C15C11D8EC0BF004DBEEF /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		5C3C15C21D8EC0BF004DBEEF /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		5C7385721D8D07B20065CE41 /* EasyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7385761D8D07B20065CE41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C7385781D8D07B20065CE41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +33,8 @@
 		5C7385811D8D07B20065CE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C7385841D8D07B20065CE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7385861D8D07B20065CE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9493221D8EB9FA002A7EB4 /* TodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItem.h; sourceTree = "<group>"; };
+		5C9493231D8EB9FA002A7EB4 /* TodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C3C15B31D8EBD2E004DBEEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C9493221D8EB9FA002A7EB4 /* TodoItem.h */,
+				5C9493231D8EB9FA002A7EB4 /* TodoItem.m */,
+				5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */,
+				5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5C3C15B41D8EBD37004DBEEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C73857E1D8D07B20065CE41 /* Main.storyboard */,
+				5C7385831D8D07B20065CE41 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5C3C15B51D8EBD47004DBEEF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5C73857B1D8D07B20065CE41 /* ViewController.h */,
+				5C73857C1D8D07B20065CE41 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5C3C15B61D8EBD55004DBEEF /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15BD1D8EBE38004DBEEF /* Network */,
+				5C3C15BC1D8EBE31004DBEEF /* Tool */,
+				5C3C15BB1D8EBE29004DBEEF /* Macros */,
+			);
+			name = Expand;
+			sourceTree = "<group>";
+		};
+		5C3C15B71D8EBD63004DBEEF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15BA1D8EBDAA004DBEEF /* Plist */,
+				5C3C15B91D8EBDA3004DBEEF /* Image */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		5C3C15B81D8EBD7C004DBEEF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5C7385781D8D07B20065CE41 /* AppDelegate.h */,
+				5C7385791D8D07B20065CE41 /* AppDelegate.m */,
+				5C7385761D8D07B20065CE41 /* main.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		5C3C15B91D8EBDA3004DBEEF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5C7385811D8D07B20065CE41 /* Assets.xcassets */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		5C3C15BA1D8EBDAA004DBEEF /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				5C7385861D8D07B20065CE41 /* Info.plist */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		5C3C15BB1D8EBE29004DBEEF /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Macros;
+			sourceTree = "<group>";
+		};
+		5C3C15BC1D8EBE31004DBEEF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15C11D8EC0BF004DBEEF /* Util.h */,
+				5C3C15C21D8EC0BF004DBEEF /* Util.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		5C3C15BD1D8EBE38004DBEEF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		5C7385691D8D07B10065CE41 = {
 			isa = PBXGroup;
 			children = (
@@ -58,25 +164,14 @@
 		5C7385741D8D07B20065CE41 /* EasyTodo */ = {
 			isa = PBXGroup;
 			children = (
-				5C7385781D8D07B20065CE41 /* AppDelegate.h */,
-				5C7385791D8D07B20065CE41 /* AppDelegate.m */,
-				5C73857B1D8D07B20065CE41 /* ViewController.h */,
-				5C73857C1D8D07B20065CE41 /* ViewController.m */,
-				5C73857E1D8D07B20065CE41 /* Main.storyboard */,
-				5C7385811D8D07B20065CE41 /* Assets.xcassets */,
-				5C7385831D8D07B20065CE41 /* LaunchScreen.storyboard */,
-				5C7385861D8D07B20065CE41 /* Info.plist */,
-				5C7385751D8D07B20065CE41 /* Supporting Files */,
+				5C3C15B31D8EBD2E004DBEEF /* Model */,
+				5C3C15B41D8EBD37004DBEEF /* View */,
+				5C3C15B51D8EBD47004DBEEF /* ViewController */,
+				5C3C15B61D8EBD55004DBEEF /* Expand */,
+				5C3C15B71D8EBD63004DBEEF /* Resource */,
+				5C3C15B81D8EBD7C004DBEEF /* Other */,
 			);
 			path = EasyTodo;
-			sourceTree = "<group>";
-		};
-		5C7385751D8D07B20065CE41 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5C7385761D8D07B20065CE41 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +248,10 @@
 			files = (
 				5C73857D1D8D07B20065CE41 /* ViewController.m in Sources */,
 				5C73857A1D8D07B20065CE41 /* AppDelegate.m in Sources */,
+				5C3C15C01D8EC04D004DBEEF /* DoneItemGroup.m in Sources */,
+				5C9493241D8EB9FA002A7EB4 /* TodoItem.m in Sources */,
 				5C7385771D8D07B20065CE41 /* main.m in Sources */,
+				5C3C15C31D8EC0BF004DBEEF /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +410,7 @@
 				5C73858B1D8D07B20065CE41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

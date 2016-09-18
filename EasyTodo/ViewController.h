@@ -10,7 +10,9 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UISegmentedControl *ItemFlagSwitch;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *itemFlagSwitch;
+@property (weak, nonatomic) IBOutlet UITableView *doneItemTableView;
+@property (weak, nonatomic) IBOutlet UITableView *todoItemTableView;
 
 @end
 
