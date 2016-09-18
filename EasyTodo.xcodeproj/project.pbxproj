@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5C3C15C01D8EC04D004DBEEF /* DoneItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */; };
 		5C3C15C31D8EC0BF004DBEEF /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15C21D8EC0BF004DBEEF /* Util.m */; };
+		5C3C15C61D8ED443004DBEEF /* TodoItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */; };
 		5C7385771D8D07B20065CE41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7385761D8D07B20065CE41 /* main.m */; };
 		5C73857A1D8D07B20065CE41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7385791D8D07B20065CE41 /* AppDelegate.m */; };
 		5C73857D1D8D07B20065CE41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C73857C1D8D07B20065CE41 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 		5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneItemGroup.m; sourceTree = "<group>"; };
 		5C3C15C11D8EC0BF004DBEEF /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
 		5C3C15C21D8EC0BF004DBEEF /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		5C3C15C41D8ED443004DBEEF /* TodoItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItemTableViewCell.h; sourceTree = "<group>"; };
+		5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItemTableViewCell.m; sourceTree = "<group>"; };
 		5C7385721D8D07B20065CE41 /* EasyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7385761D8D07B20065CE41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C7385781D8D07B20065CE41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +58,8 @@
 				5C9493231D8EB9FA002A7EB4 /* TodoItem.m */,
 				5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */,
 				5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */,
+				5C3C15C41D8ED443004DBEEF /* TodoItemTableViewCell.h */,
+				5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -250,6 +255,7 @@
 				5C73857A1D8D07B20065CE41 /* AppDelegate.m in Sources */,
 				5C3C15C01D8EC04D004DBEEF /* DoneItemGroup.m in Sources */,
 				5C9493241D8EB9FA002A7EB4 /* TodoItem.m in Sources */,
+				5C3C15C61D8ED443004DBEEF /* TodoItemTableViewCell.m in Sources */,
 				5C7385771D8D07B20065CE41 /* main.m in Sources */,
 				5C3C15C31D8EC0BF004DBEEF /* Util.m in Sources */,
 			);

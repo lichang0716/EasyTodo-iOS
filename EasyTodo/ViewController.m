@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TodoItem.h"
 #import "DoneItemGroup.h"
+#import "TodoItemTableViewCell.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_todoItemArr;
@@ -78,15 +79,18 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    TodoItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TodoItemCell"];
+    if(!cell){
+        NSLog(@"执行这里？？");
+        cell = [[TodoItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TodoItemCell"];
+    }
     if (tableView == _todoItemTableView) {
         TodoItem *todoItem = _todoItemArr[indexPath.row];
-        cell.textLabel.text=[todoItem itemDescription];
+        cell.cellDescription.text=[todoItem itemDescription];
     } else {
         DoneItemGroup *_doneItemGroup = _doneItemArr[indexPath.section];
         TodoItem *todoItem = _doneItemGroup.doneItemsArr[indexPath.row];
-        cell.textLabel.text=[todoItem itemDescription];
-        cell.detailTextLabel.text=[NSString stringWithFormat:@"%d", todoItem.createTime];
+        cell.cellDescription.text = [todoItem itemDescription];
     }
     return cell;
 }
