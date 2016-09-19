@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="120" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ue5-JU-Pns" id="Dnq-Oz-OiU">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQm-P5-zbs">
@@ -54,7 +54,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vG8-Bl-Neg" id="d73-00-62v">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7f-ni-4mZ">
@@ -91,6 +91,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6y1-m2-1iL">
                         <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="IDS-rT-pPt">
+                            <connections>
+                                <action selector="editList:" destination="BYZ-38-t0r" id="KTe-4d-5dS"/>
+                            </connections>
+                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="yko-ol-G8G">
                             <rect key="frame" x="113" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,9 +104,16 @@
                                 <segment title="Done"/>
                             </segments>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qqp-J1-IWm">
+                            <connections>
+                                <action selector="addItem:" destination="BYZ-38-t0r" id="hg3-m1-MG0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addItemButton" destination="qqp-J1-IWm" id="1wb-UJ-FgO"/>
                         <outlet property="doneItemTableView" destination="ong-8h-Y8y" id="DyE-a7-Ght"/>
+                        <outlet property="editListButton" destination="IDS-rT-pPt" id="F68-u5-gtN"/>
                         <outlet property="itemFlagSwitch" destination="yko-ol-G8G" id="BlL-Fb-APB"/>
                         <outlet property="todoItemTableView" destination="47l-5V-2IM" id="x0k-gM-3VM"/>
                     </connections>

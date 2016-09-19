@@ -10,6 +10,7 @@
 #import "TodoItem.h"
 #import "DoneItemGroup.h"
 #import "TodoItemTableViewCell.h"
+#import "MacroDefine.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
     NSMutableArray *_todoItemArr;
@@ -22,6 +23,8 @@
 @synthesize itemFlagSwitch = _itemFlagSwitch;
 @synthesize doneItemTableView = _doneItemTableView;
 @synthesize todoItemTableView = _todoItemTableView;
+@synthesize editListButton = _editListButton;
+@synthesize addItemButton = _addItemButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,14 +53,52 @@
             // 为 todo 的情况
             _todoItemTableView.alpha = 1.0;
             _doneItemTableView.alpha = 0.0;
+            [self showBarItems];
             break;
         case 1:
             // 为 done 的情况
             _todoItemTableView.alpha = 0.0;
             _doneItemTableView.alpha = 1.0;
+            [self hiddenBarItems];
             break;
         default:
             break;
+    }
+}
+
+- (void)showBarItems {
+    _addItemButton.enabled = YES;
+    _addItemButton.tintColor = nil;
+    _editListButton.enabled = YES;
+    _editListButton.tintColor = nil;
+}
+
+- (void)hiddenBarItems {
+    _addItemButton.enabled = NO;
+    _addItemButton.tintColor = [UIColor clearColor];
+    _editListButton.enabled = NO;
+    _editListButton.tintColor = [UIColor clearColor];
+}
+
+- (IBAction)addItem:(id)sender {
+    NSLog(@"执行添加 item");
+    TodoItem *newTodoItem = [[TodoItem alloc] initWithDescription:@"这是一个新的 TodoItem"];
+//    [_todoItemArr addObject:newTodoItem];
+    [_todoItemArr insertObject:newTodoItem atIndex:0];
+    NSInteger lastRow = [_todoItemArr indexOfObject:newTodoItem];
+    NSLog(@"lastRow = %d", (int)lastRow);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    NSLog(@"indexPath = %d", (int)indexPath);
+    [_todoItemTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+- (IBAction)editList:(id)sender {
+    if (_todoItemTableView.editing) {
+        _editListButton.title = EDIT;
+        [_todoItemTableView setEditing:NO animated:YES];
+    } else {
+        _editListButton.title = DONE;
+        [_todoItemTableView setEditing:YES animated:YES];
     }
 }
 
@@ -79,10 +120,9 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    TodoItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TodoItemCell"];
+    TodoItemTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     if(!cell){
-        NSLog(@"执行这里？？");
-        cell = [[TodoItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TodoItemCell"];
+        cell = [[TodoItemTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     }
     if (tableView == _todoItemTableView) {
         TodoItem *todoItem = _todoItemArr[indexPath.row];
@@ -103,6 +143,23 @@
     } else {
         return nil;
     }
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        TodoItem *deleteItem = _todoItemArr[indexPath.row];
+        [_todoItemArr removeObjectIdenticalTo:deleteItem];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    if (sourceIndexPath == destinationIndexPath) {
+        return;
+    }
+    TodoItem *origTodoItem = _todoItemArr[sourceIndexPath.row];
+    [_todoItemArr removeObjectIdenticalTo:origTodoItem];
+    [_todoItemArr insertObject:origTodoItem atIndex:destinationIndexPath.row];
 }
 
 #pragma mark set simulation data

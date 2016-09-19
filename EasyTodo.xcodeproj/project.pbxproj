@@ -26,6 +26,7 @@
 		5C3C15C21D8EC0BF004DBEEF /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		5C3C15C41D8ED443004DBEEF /* TodoItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItemTableViewCell.h; sourceTree = "<group>"; };
 		5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItemTableViewCell.m; sourceTree = "<group>"; };
+		5C51A2D71D8F8C7100FBF37A /* MacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDefine.h; sourceTree = "<group>"; };
 		5C7385721D8D07B20065CE41 /* EasyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7385761D8D07B20065CE41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5C7385781D8D07B20065CE41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +131,7 @@
 		5C3C15BB1D8EBE29004DBEEF /* Macros */ = {
 			isa = PBXGroup;
 			children = (
+				5C51A2D71D8F8C7100FBF37A /* MacroDefine.h */,
 			);
 			name = Macros;
 			sourceTree = "<group>";
