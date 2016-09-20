@@ -45,12 +45,13 @@
     
     _doneItemTableView.alpha = 0.0;
     
+    _itemDescribeTextField.alpha = 0.0;
+    
     _itemDescribeInit = [[NSString alloc] init];
 }
 
 - (void)viewDidLayoutSubviews {
     [Util setTextFieldBorder:_itemDescribeTextField borderColor:[UIColor lightGrayColor]];
-    _itemDescribeTextField.alpha = 0.0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -89,6 +90,7 @@
 }
 
 - (IBAction)addItem:(id)sender {
+    _addItemButton.enabled = NO;
     [_itemDescribeTextField becomeFirstResponder];
     _todoItemTableView.alpha = 0.0;
     _doneItemTableView.alpha = 0.0;
@@ -153,8 +155,7 @@
     _doneItemTableView.alpha = 0.0;
     TodoItem *selectedItem = _todoItemArr[indexPath.row];
     _itemDescribeInit = selectedItem.itemDescription;
-    NSLog(@"_itemDescribeInit = %@", _itemDescribeInit);
-//    _itemDescribeTextField.text = _itemDescribeInit;
+    _itemDescribeTextField.text = _itemDescribeInit;
     _itemDescribeTextField.alpha = 1.0;
     [_itemDescribeTextField becomeFirstResponder];
 }
@@ -166,8 +167,18 @@
             [self insetNewTodoItem];
         }
         _todoItemTableView.alpha = 1.0;
+        _addItemButton.enabled = YES;
     }
     return YES;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [_itemDescribeTextField resignFirstResponder];
+    if (_itemDescribeTextField.text.length > 0) {
+        [self insetNewTodoItem];
+    }
+    _todoItemTableView.alpha = 1.0;
+    _addItemButton.enabled = YES;
 }
 
 - (void)modifyTodoItem:(TodoItem *)todoItem {
