@@ -11,20 +11,23 @@
 #import "DoneItemGroup.h"
 #import "TodoItemTableViewCell.h"
 #import "MacroDefine.h"
+#import "Util.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource> {
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> {
     NSMutableArray *_todoItemArr;
     NSMutableArray *_doneItemArr;
+    NSString *_itemDescribeInit;
 }
 
 @end
 
 @implementation ViewController
 @synthesize itemFlagSwitch = _itemFlagSwitch;
+@synthesize itemDescribeTextField = _itemDescribeTextField;
 @synthesize doneItemTableView = _doneItemTableView;
 @synthesize todoItemTableView = _todoItemTableView;
-@synthesize editListButton = _editListButton;
 @synthesize addItemButton = _addItemButton;
+@synthesize longPressGesture = _longPressGesture;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,8 +40,17 @@
     
     _doneItemTableView.dataSource = self;
     _todoItemTableView.dataSource = self;
+    _todoItemTableView.delegate = self;
+    _itemDescribeTextField.delegate = self;
     
     _doneItemTableView.alpha = 0.0;
+    
+    _itemDescribeInit = [[NSString alloc] init];
+}
+
+- (void)viewDidLayoutSubviews {
+    [Util setTextFieldBorder:_itemDescribeTextField borderColor:[UIColor lightGrayColor]];
+    _itemDescribeTextField.alpha = 0.0;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,37 +81,27 @@
 - (void)showBarItems {
     _addItemButton.enabled = YES;
     _addItemButton.tintColor = nil;
-    _editListButton.enabled = YES;
-    _editListButton.tintColor = nil;
 }
 
 - (void)hiddenBarItems {
     _addItemButton.enabled = NO;
     _addItemButton.tintColor = [UIColor clearColor];
-    _editListButton.enabled = NO;
-    _editListButton.tintColor = [UIColor clearColor];
 }
 
 - (IBAction)addItem:(id)sender {
-    NSLog(@"执行添加 item");
-    TodoItem *newTodoItem = [[TodoItem alloc] initWithDescription:@"这是一个新的 TodoItem"];
-//    [_todoItemArr addObject:newTodoItem];
-    [_todoItemArr insertObject:newTodoItem atIndex:0];
-    NSInteger lastRow = [_todoItemArr indexOfObject:newTodoItem];
-    NSLog(@"lastRow = %d", (int)lastRow);
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
-    NSLog(@"indexPath = %d", (int)indexPath);
-    [_todoItemTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    [_itemDescribeTextField becomeFirstResponder];
+    _todoItemTableView.alpha = 0.0;
+    _doneItemTableView.alpha = 0.0;
+    _itemDescribeTextField.alpha = 1.0;
+    _itemDescribeTextField.text = EMPTY_STR;
 }
 
-- (IBAction)editList:(id)sender {
-    if (_todoItemTableView.editing) {
-        _editListButton.title = EDIT;
-        [_todoItemTableView setEditing:NO animated:YES];
-    } else {
-        _editListButton.title = DONE;
-        [_todoItemTableView setEditing:YES animated:YES];
-    }
+- (void)insetNewTodoItem {
+    TodoItem *newTodoItem = [[TodoItem alloc] initWithDescription:_itemDescribeTextField.text];
+    [_todoItemArr insertObject:newTodoItem atIndex:0];
+    NSInteger lastRow = [_todoItemArr indexOfObject:newTodoItem];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    [_todoItemTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -145,31 +147,133 @@
     }
 }
 
+#pragma mark click edit item
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _todoItemTableView.alpha = 0.0;
+    _doneItemTableView.alpha = 0.0;
+    TodoItem *selectedItem = _todoItemArr[indexPath.row];
+    _itemDescribeInit = selectedItem.itemDescription;
+    NSLog(@"_itemDescribeInit = %@", _itemDescribeInit);
+//    _itemDescribeTextField.text = _itemDescribeInit;
+    _itemDescribeTextField.alpha = 1.0;
+    [_itemDescribeTextField becomeFirstResponder];
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([string isEqualToString:RETURN]) {
+        [_itemDescribeTextField resignFirstResponder];
+        if (_itemDescribeTextField.text.length > 0) {
+            [self insetNewTodoItem];
+        }
+        _todoItemTableView.alpha = 1.0;
+    }
+    return YES;
+}
+
+- (void)modifyTodoItem:(TodoItem *)todoItem {
+    
+}
+
+#pragma mark right slide mark done
+
+#pragma mark left slide delete
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return DELETE;
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        TodoItem *deleteItem = _todoItemArr[indexPath.row];
-        [_todoItemArr removeObjectIdenticalTo:deleteItem];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    [_todoItemArr removeObjectAtIndex:indexPath.row];
+    [_todoItemTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+#pragma mark long press gesture
+
+- (IBAction)longPressTodoTableView:(id)sender {
+    UILongPressGestureRecognizer *longPressGes = (UILongPressGestureRecognizer *)sender;
+    UIGestureRecognizerState state = longPressGes.state;
+    
+    CGPoint location = [longPressGes locationInView: _todoItemTableView];
+    NSIndexPath *indexPath = [_todoItemTableView indexPathForRowAtPoint:location];
+    
+    static UIView *snapShot = nil;
+    static NSIndexPath *sourceIndexPath = nil;
+    switch (state) {
+        case UIGestureRecognizerStateBegan:
+        {
+            if (indexPath) {
+                sourceIndexPath = indexPath;
+                UITableViewCell *cell = [_todoItemTableView cellForRowAtIndexPath:indexPath];
+                
+                snapShot = [self getCustomeSnapShot:cell];
+                
+                __block CGPoint center = cell.center;
+                snapShot.center = center;
+                snapShot.alpha = 1.0f;
+                [_todoItemTableView addSubview:snapShot];
+                
+                [UIView animateWithDuration:0.25 animations:^{
+                    center = CGPointMake(center.x, location.y);
+                    snapShot.center = center;
+                    snapShot.transform = CGAffineTransformScale(snapShot.transform, 1.0, 1.0);
+                    snapShot.alpha = 1.0;
+                }];
+            }
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+        {
+            CGPoint center = snapShot.center;
+            snapShot.center = CGPointMake(center.x, location.y);
+            if (indexPath && ![indexPath isEqual:sourceIndexPath]) {
+                [_todoItemArr exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
+                [_todoItemTableView moveRowAtIndexPath:sourceIndexPath toIndexPath:indexPath];
+                sourceIndexPath = indexPath;
+            }
+        }
+            break;
+        default:
+        {
+            UITableViewCell *cell = [_todoItemTableView cellForRowAtIndexPath:sourceIndexPath];
+            [UIView animateWithDuration:0.5 animations:^{
+                snapShot.center = cell.center;
+                snapShot.transform = CGAffineTransformIdentity;
+                snapShot.alpha = 1.0f;
+                cell.backgroundColor = [UIColor clearColor];
+                
+            } completion:^(BOOL finished) {
+                [snapShot removeFromSuperview];
+                snapShot = nil;
+                
+            }];
+            sourceIndexPath = nil;
+        }
+            break;
     }
 }
 
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    if (sourceIndexPath == destinationIndexPath) {
-        return;
-    }
-    TodoItem *origTodoItem = _todoItemArr[sourceIndexPath.row];
-    [_todoItemArr removeObjectIdenticalTo:origTodoItem];
-    [_todoItemArr insertObject:origTodoItem atIndex:destinationIndexPath.row];
+- (UIView *)getCustomeSnapShot:(UIView *)inputView
+{
+    UIGraphicsBeginImageContextWithOptions(inputView.bounds.size, NO, 0);
+    [inputView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIView *snapshot = [[UIImageView alloc] initWithImage:image];
+    return snapshot;
 }
 
 #pragma mark set simulation data
 - (void)initData {
     _todoItemArr = [[NSMutableArray alloc] init];
-    TodoItem *todoItem0 = [[TodoItem alloc] initWithDescription:@"todo list item 0"];
-    TodoItem *todoItem1 = [[TodoItem alloc] initWithDescription:@"todo list item 1"];
-    TodoItem *todoItem2 = [[TodoItem alloc] initWithDescription:@"todo list item 2"];
-    TodoItem *todoItem3 = [[TodoItem alloc] initWithDescription:@"todo list item 3"];
-    TodoItem *todoItem4 = [[TodoItem alloc] initWithDescription:@"todo list item 4"];
+    TodoItem *todoItem0 = [[TodoItem alloc] initWithDescription:@"左划可以删除 item"];
+    TodoItem *todoItem1 = [[TodoItem alloc] initWithDescription:@"长按可以移动 item"];
+    TodoItem *todoItem2 = [[TodoItem alloc] initWithDescription:@"右划可以完成 item"];
+    TodoItem *todoItem3 = [[TodoItem alloc] initWithDescription:@"点击可以编辑 item"];
+    TodoItem *todoItem4 = [[TodoItem alloc] initWithDescription:@"点击 Add 可以添加 item"];
     TodoItem *todoItem5 = [[TodoItem alloc] initWithDescription:@"todo list item 5"];
     [_todoItemArr addObject:todoItem0];
     [_todoItemArr addObject:todoItem1];

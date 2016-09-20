@@ -12,6 +12,9 @@
 #define CELL_IDENTIFIER         @"TodoItemCell"
 #define EDIT                    @"Edit"
 #define DONE                    @"Done"
+#define DELETE                  @"Delete"
+#define RETURN                  @"\n"
+#define EMPTY_STR               @""
 
 
 

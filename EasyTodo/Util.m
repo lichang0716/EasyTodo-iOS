@@ -17,4 +17,14 @@
     return timeString.intValue;
 }
 
++ (void)setTextFieldBorder:(UITextField *)textField borderColor:(UIColor*)color{
+    CALayer *border = [CALayer layer];
+    CGFloat borderWidth = 1.0;
+    border.borderColor = color.CGColor;
+    border.frame = CGRectMake(0, textField.frame.size.height - borderWidth, textField.frame.size.width, textField.frame.size.height);
+    border.borderWidth = borderWidth;
+    [textField.layer addSublayer:border];
+    textField.layer.masksToBounds = YES;
+}
+
 @end

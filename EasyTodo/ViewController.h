@@ -11,13 +11,14 @@
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *itemFlagSwitch;
+@property (weak, nonatomic) IBOutlet UITextField *itemDescribeTextField;
 @property (weak, nonatomic) IBOutlet UITableView *doneItemTableView;
 @property (weak, nonatomic) IBOutlet UITableView *todoItemTableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addItemButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *editListButton;
+@property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressGesture;
 
 - (IBAction)addItem:(id)sender;
-- (IBAction)editList:(id)sender;
+- (IBAction)longPressTodoTableView:(id)sender;
 
 @end
 

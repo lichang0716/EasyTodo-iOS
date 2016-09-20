@@ -18,11 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MmQ-hy-eDw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="z1x-x8-bpc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ong-8h-Y8y">
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoItemCell" id="ue5-JU-Pns" customClass="TodoItemTableViewCell">
-                                        <rect key="frame" x="0.0" y="120" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ue5-JU-Pns" id="Dnq-Oz-OiU">
                                             <frame key="frameInset" width="375" height="44"/>
@@ -49,6 +57,7 @@
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="47l-5V-2IM">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoItemCell" id="vG8-Bl-Neg" customClass="TodoItemTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -75,29 +84,30 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cDi-9a-Bbb" appends="YES" id="aOI-a4-giC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MmQ-hy-eDw" secondAttribute="trailing" constant="20" id="30f-So-nUZ"/>
                             <constraint firstItem="47l-5V-2IM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3zX-qq-Q2T"/>
-                            <constraint firstItem="ong-8h-Y8y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5ir-h9-Rh7"/>
+                            <constraint firstItem="ong-8h-Y8y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="5ir-h9-Rh7"/>
+                            <constraint firstItem="MmQ-hy-eDw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="FJb-i2-GP6"/>
                             <constraint firstAttribute="trailing" secondItem="ong-8h-Y8y" secondAttribute="trailing" id="FyO-tb-oDP"/>
                             <constraint firstItem="ong-8h-Y8y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VHO-0W-Fgy"/>
                             <constraint firstAttribute="bottom" secondItem="47l-5V-2IM" secondAttribute="bottom" id="d9v-rR-rY7"/>
                             <constraint firstItem="47l-5V-2IM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dFm-BF-yCQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ong-8h-Y8y" secondAttribute="bottom" id="j2C-4G-7cq"/>
+                            <constraint firstItem="MmQ-hy-eDw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kOa-aD-aKr"/>
                             <constraint firstAttribute="trailing" secondItem="47l-5V-2IM" secondAttribute="trailing" id="vaQ-U5-TNr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6y1-m2-1iL">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="IDS-rT-pPt">
-                            <connections>
-                                <action selector="editList:" destination="BYZ-38-t0r" id="KTe-4d-5dS"/>
-                            </connections>
-                        </barButtonItem>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="yko-ol-G8G">
-                            <rect key="frame" x="113" y="7" width="150" height="30"/>
+                            <rect key="frame" x="112.5" y="7" width="150" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Todo"/>
@@ -113,12 +123,18 @@
                     <connections>
                         <outlet property="addItemButton" destination="qqp-J1-IWm" id="1wb-UJ-FgO"/>
                         <outlet property="doneItemTableView" destination="ong-8h-Y8y" id="DyE-a7-Ght"/>
-                        <outlet property="editListButton" destination="IDS-rT-pPt" id="F68-u5-gtN"/>
+                        <outlet property="itemDescribeTextField" destination="MmQ-hy-eDw" id="DXm-kV-sQq"/>
                         <outlet property="itemFlagSwitch" destination="yko-ol-G8G" id="BlL-Fb-APB"/>
+                        <outlet property="longPressGesture" destination="cDi-9a-Bbb" id="uzI-65-MdA"/>
                         <outlet property="todoItemTableView" destination="47l-5V-2IM" id="x0k-gM-3VM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="cDi-9a-Bbb">
+                    <connections>
+                        <action selector="longPressTodoTableView:" destination="BYZ-38-t0r" id="pob-UM-QX4"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="965.60000000000002" y="-545.57721139430294"/>
         </scene>
