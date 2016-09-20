@@ -17,6 +17,7 @@
     NSMutableArray *_todoItemArr;
     NSMutableArray *_doneItemArr;
     NSString *_itemDescribeInit;
+    TodoItem *itemWantToChange;
 }
 
 @end
@@ -95,7 +96,8 @@
     _todoItemTableView.alpha = 0.0;
     _doneItemTableView.alpha = 0.0;
     _itemDescribeTextField.alpha = 1.0;
-    _itemDescribeTextField.text = EMPTY_STR;
+    _itemDescribeInit = EMPTY_STR;
+    _itemDescribeTextField.text = _itemDescribeInit;
 }
 
 - (void)insetNewTodoItem {
@@ -104,6 +106,11 @@
     NSInteger lastRow = [_todoItemArr indexOfObject:newTodoItem];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     [_todoItemTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+}
+
+- (void)modifyTodoItem:(TodoItem *)todoItem {
+    todoItem.itemDescription = _itemDescribeTextField.text;
+    [_todoItemTableView reloadData];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -154,6 +161,7 @@
     _todoItemTableView.alpha = 0.0;
     _doneItemTableView.alpha = 0.0;
     TodoItem *selectedItem = _todoItemArr[indexPath.row];
+    itemWantToChange = selectedItem;
     _itemDescribeInit = selectedItem.itemDescription;
     _itemDescribeTextField.text = _itemDescribeInit;
     _itemDescribeTextField.alpha = 1.0;
@@ -163,26 +171,26 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if ([string isEqualToString:RETURN]) {
         [_itemDescribeTextField resignFirstResponder];
-        if (_itemDescribeTextField.text.length > 0) {
-            [self insetNewTodoItem];
-        }
         _todoItemTableView.alpha = 1.0;
         _addItemButton.enabled = YES;
+        if (_itemDescribeInit.length > 0 && ![_itemDescribeTextField.text isEqualToString:_itemDescribeInit]) {
+            [self modifyTodoItem:itemWantToChange];
+        } else if(_itemDescribeInit.length == 0 && _itemDescribeTextField.text.length > 0){
+            [self insetNewTodoItem];
+        }
     }
     return YES;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [_itemDescribeTextField resignFirstResponder];
-    if (_itemDescribeTextField.text.length > 0) {
-        [self insetNewTodoItem];
-    }
     _todoItemTableView.alpha = 1.0;
     _addItemButton.enabled = YES;
-}
-
-- (void)modifyTodoItem:(TodoItem *)todoItem {
-    
+    if (_itemDescribeInit.length > 0 && ![_itemDescribeTextField.text isEqualToString:_itemDescribeInit]) {
+        [self modifyTodoItem:itemWantToChange];
+    } else if(_itemDescribeInit.length == 0 && _itemDescribeTextField.text.length > 0){
+        [self insetNewTodoItem];
+    }
 }
 
 #pragma mark right slide mark done
