@@ -64,15 +64,18 @@
 - (void)switchItemFlag {
     switch (_itemFlagSwitch.selectedSegmentIndex) {
         case 0:
-            // 为 todo 的情况
             _todoItemTableView.alpha = 1.0;
             _doneItemTableView.alpha = 0.0;
             [self showBarItems];
             break;
         case 1:
-            // 为 done 的情况
             _todoItemTableView.alpha = 0.0;
             _doneItemTableView.alpha = 1.0;
+            if (_itemDescribeTextField.alpha > 0) {
+                _itemDescribeTextField.alpha = 0.0;
+                [self operateItemDescribeTextField];
+            }
+            [_itemDescribeTextField resignFirstResponder];
             [self hiddenBarItems];
             break;
         default:
@@ -111,6 +114,14 @@
 - (void)modifyTodoItem:(TodoItem *)todoItem {
     todoItem.itemDescription = _itemDescribeTextField.text;
     [_todoItemTableView reloadData];
+}
+
+- (void)operateItemDescribeTextField {
+    if (_itemDescribeInit.length > 0 && ![_itemDescribeTextField.text isEqualToString:_itemDescribeInit]) {
+        [self modifyTodoItem:itemWantToChange];
+    } else if(_itemDescribeInit.length == 0 && _itemDescribeTextField.text.length > 0){
+        [self insetNewTodoItem];
+    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -174,11 +185,7 @@
         [_itemDescribeTextField resignFirstResponder];
         _todoItemTableView.alpha = 1.0;
         _addItemButton.enabled = YES;
-        if (_itemDescribeInit.length > 0 && ![_itemDescribeTextField.text isEqualToString:_itemDescribeInit]) {
-            [self modifyTodoItem:itemWantToChange];
-        } else if(_itemDescribeInit.length == 0 && _itemDescribeTextField.text.length > 0){
-            [self insetNewTodoItem];
-        }
+        [self operateItemDescribeTextField];
     }
     return YES;
 }
@@ -187,11 +194,7 @@
     [_itemDescribeTextField resignFirstResponder];
     _todoItemTableView.alpha = 1.0;
     _addItemButton.enabled = YES;
-    if (_itemDescribeInit.length > 0 && ![_itemDescribeTextField.text isEqualToString:_itemDescribeInit]) {
-        [self modifyTodoItem:itemWantToChange];
-    } else if(_itemDescribeInit.length == 0 && _itemDescribeTextField.text.length > 0){
-        [self insetNewTodoItem];
-    }
+    [self operateItemDescribeTextField];
 }
 
 #pragma mark right slide mark done
