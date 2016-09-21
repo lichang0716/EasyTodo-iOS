@@ -191,7 +191,7 @@
     return YES;
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)touchesBegan:(NSSet<UITouch*>*)touches withEvent:(UIEvent *)event {
     [_itemDescribeTextField resignFirstResponder];
     _todoItemTableView.alpha = 1.0;
     _addItemButton.enabled = YES;
