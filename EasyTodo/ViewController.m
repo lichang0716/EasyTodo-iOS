@@ -203,7 +203,7 @@
 - (IBAction)rightSlideTodoTableView:(id)sender {
     CGPoint location = [sender locationInView:_todoItemTableView];
     NSIndexPath *indexPath = [_todoItemTableView indexPathForRowAtPoint:location];
-
+    
     if (indexPath) {
         [NSThread sleepForTimeInterval:0.1];
         [_todoItemArr removeObjectAtIndex:indexPath.row];
