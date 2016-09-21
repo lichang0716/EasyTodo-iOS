@@ -13,7 +13,7 @@
 #import "MacroDefine.h"
 #import "Util.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, CAAnimationDelegate> {
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> {
     NSMutableArray *_todoItemArr;
     NSMutableArray *_doneItemArr;
     NSString *_itemDescribeInit;
