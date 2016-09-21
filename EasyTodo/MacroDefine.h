@@ -16,6 +16,10 @@
 #define RETURN                  @"\n"
 #define EMPTY_STR               @""
 
+#define DAYTIME                 86400
+
+#define DATE_FORMATTER          @"yyyy.MM.dd"
+
 
 
 

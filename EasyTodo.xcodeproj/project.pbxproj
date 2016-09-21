@@ -16,8 +16,19 @@
 		5C7385801D8D07B20065CE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C73857E1D8D07B20065CE41 /* Main.storyboard */; };
 		5C7385821D8D07B20065CE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7385811D8D07B20065CE41 /* Assets.xcassets */; };
 		5C7385851D8D07B20065CE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7385831D8D07B20065CE41 /* LaunchScreen.storyboard */; };
+		5C7CB9E41D922BD900E26E8B /* EasyTodoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CB9E31D922BD900E26E8B /* EasyTodoTests.m */; };
 		5C9493241D8EB9FA002A7EB4 /* TodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9493231D8EB9FA002A7EB4 /* TodoItem.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C7CB9E61D922BD900E26E8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C73856A1D8D07B10065CE41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7385711D8D07B20065CE41;
+			remoteInfo = EasyTodo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneItemGroup.h; sourceTree = "<group>"; };
@@ -37,12 +48,22 @@
 		5C7385811D8D07B20065CE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C7385841D8D07B20065CE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C7385861D8D07B20065CE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7CB9E11D922BD900E26E8B /* EasyTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7CB9E31D922BD900E26E8B /* EasyTodoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyTodoTests.m; sourceTree = "<group>"; };
+		5C7CB9E51D922BD900E26E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C9493221D8EB9FA002A7EB4 /* TodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItem.h; sourceTree = "<group>"; };
 		5C9493231D8EB9FA002A7EB4 /* TodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5C73856F1D8D07B20065CE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7CB9DE1D922BD900E26E8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,8 +80,7 @@
 				5C9493231D8EB9FA002A7EB4 /* TodoItem.m */,
 				5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */,
 				5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */,
-				5C3C15C41D8ED443004DBEEF /* TodoItemTableViewCell.h */,
-				5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */,
+				5C7CB9DC1D92266400E26E8B /* Cell */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -156,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7385741D8D07B20065CE41 /* EasyTodo */,
+				5C7CB9E21D922BD900E26E8B /* EasyTodoTests */,
 				5C7385731D8D07B20065CE41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -164,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				5C7385721D8D07B20065CE41 /* EasyTodo.app */,
+				5C7CB9E11D922BD900E26E8B /* EasyTodoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +201,24 @@
 				5C3C15B81D8EBD7C004DBEEF /* Other */,
 			);
 			path = EasyTodo;
+			sourceTree = "<group>";
+		};
+		5C7CB9DC1D92266400E26E8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15C41D8ED443004DBEEF /* TodoItemTableViewCell.h */,
+				5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		5C7CB9E21D922BD900E26E8B /* EasyTodoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7CB9E31D922BD900E26E8B /* EasyTodoTests.m */,
+				5C7CB9E51D922BD900E26E8B /* Info.plist */,
+			);
+			path = EasyTodoTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +241,24 @@
 			productReference = 5C7385721D8D07B20065CE41 /* EasyTodo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5C7CB9E01D922BD900E26E8B /* EasyTodoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7CB9EA1D922BD900E26E8B /* Build configuration list for PBXNativeTarget "EasyTodoTests" */;
+			buildPhases = (
+				5C7CB9DD1D922BD900E26E8B /* Sources */,
+				5C7CB9DE1D922BD900E26E8B /* Frameworks */,
+				5C7CB9DF1D922BD900E26E8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7CB9E71D922BD900E26E8B /* PBXTargetDependency */,
+			);
+			name = EasyTodoTests;
+			productName = EasyTodoTests;
+			productReference = 5C7CB9E11D922BD900E26E8B /* EasyTodoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -214,6 +272,12 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8TVU93GBNX;
 						ProvisioningStyle = Automatic;
+					};
+					5C7CB9E01D922BD900E26E8B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8TVU93GBNX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5C7385711D8D07B20065CE41;
 					};
 				};
 			};
@@ -231,6 +295,7 @@
 			projectRoot = "";
 			targets = (
 				5C7385711D8D07B20065CE41 /* EasyTodo */,
+				5C7CB9E01D922BD900E26E8B /* EasyTodoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +308,13 @@
 				5C7385851D8D07B20065CE41 /* LaunchScreen.storyboard in Resources */,
 				5C7385821D8D07B20065CE41 /* Assets.xcassets in Resources */,
 				5C7385801D8D07B20065CE41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7CB9DF1D922BD900E26E8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +335,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5C7CB9DD1D922BD900E26E8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7CB9E41D922BD900E26E8B /* EasyTodoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C7CB9E71D922BD900E26E8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7385711D8D07B20065CE41 /* EasyTodo */;
+			targetProxy = 5C7CB9E61D922BD900E26E8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5C73857E1D8D07B20065CE41 /* Main.storyboard */ = {
@@ -399,6 +487,32 @@
 			};
 			name = Release;
 		};
+		5C7CB9E81D922BD900E26E8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.amute.EasyTodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyTodo.app/EasyTodo";
+			};
+			name = Debug;
+		};
+		5C7CB9E91D922BD900E26E8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.amute.EasyTodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyTodo.app/EasyTodo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,6 +533,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		5C7CB9EA1D922BD900E26E8B /* Build configuration list for PBXNativeTarget "EasyTodoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7CB9E81D922BD900E26E8B /* Debug */,
+				5C7CB9E91D922BD900E26E8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

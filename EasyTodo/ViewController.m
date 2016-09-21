@@ -309,7 +309,7 @@
     TodoItem *todoItem2 = [[TodoItem alloc] initWithDescription:@"右划可以完成 item"];
     TodoItem *todoItem3 = [[TodoItem alloc] initWithDescription:@"点击可以编辑 item"];
     TodoItem *todoItem4 = [[TodoItem alloc] initWithDescription:@"点击 Add 可以添加 item"];
-    TodoItem *todoItem5 = [[TodoItem alloc] initWithDescription:@"todo list item 5"];
+    TodoItem *todoItem5 = [[TodoItem alloc] initWithDescription:@"Enjoy it !"];
     [_todoItemArr addObject:todoItem0];
     [_todoItemArr addObject:todoItem1];
     [_todoItemArr addObject:todoItem2];

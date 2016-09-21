@@ -7,6 +7,7 @@
 //
 
 #import "Util.h"
+#import "MacroDefine.h"
 
 @implementation Util
 
@@ -25,6 +26,14 @@
     border.borderWidth = borderWidth;
     [textField.layer addSublayer:border];
     textField.layer.masksToBounds = YES;
+}
+
++ (NSString *)getDateFormUnixTimeStamp:(int)unixTimeStamp {
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:unixTimeStamp];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = DATE_FORMATTER;
+    NSString *timeStr = [formatter stringFromDate:date];
+    return timeStr;
 }
 
 @end

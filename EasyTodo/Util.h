@@ -27,4 +27,14 @@
  */
 + (void)setTextFieldBorder:(UITextField *)textField borderColor:(UIColor*)color;
 
+
+/**
+ 把 Unix 时间戳转换为字符串日期
+
+ @param unixTimeStamp Unix 时间戳
+
+ @return 字符串日期
+ */
++ (NSString *)getDateFormUnixTimeStamp:(int)unixTimeStamp;
+
 @end
