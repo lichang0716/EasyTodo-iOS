@@ -16,9 +16,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *todoItemTableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addItemButton;
 @property (strong, nonatomic) IBOutlet UILongPressGestureRecognizer *longPressGesture;
+@property (strong, nonatomic) IBOutlet UISwipeGestureRecognizer *rightSlideGesture;
 
 - (IBAction)addItem:(id)sender;
 - (IBAction)longPressTodoTableView:(id)sender;
+- (IBAction)rightSlideTodoTableView:(id)sender;
 
 @end
 

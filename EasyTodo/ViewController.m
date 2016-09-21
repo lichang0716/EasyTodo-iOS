@@ -18,8 +18,6 @@
     NSMutableArray *_doneItemArr;
     NSString *_itemDescribeInit;
     TodoItem *_itemWantToChange;
-    CALayer *_viewMaskLayer;
-    UIView *_topView;
 }
 
 @end
@@ -31,6 +29,7 @@
 @synthesize todoItemTableView = _todoItemTableView;
 @synthesize addItemButton = _addItemButton;
 @synthesize longPressGesture = _longPressGesture;
+@synthesize rightSlideGesture = _rightSlideGesture;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -200,33 +199,17 @@
 }
 
 #pragma mark right slide mark done
-- (void)setMaskLayer:(UIView *)view {
-    CAGradientLayer *maskLayer = [CAGradientLayer layer];
-    maskLayer.position = CGPointMake(-CGRectGetWidth(view.bounds)/2, CGRectGetHeight(view.bounds) / 2);
-    maskLayer.bounds = view.bounds;
-    maskLayer.colors = @[(id)[UIColor clearColor].CGColor,
-                         (id)[UIColor whiteColor].CGColor,
-                         (id)[UIColor clearColor].CGColor,];
-    maskLayer.startPoint = CGPointMake(0, 0.5);
-    maskLayer.endPoint = CGPointMake(1, 0.5);
-    view.layer.mask = maskLayer;
-    _viewMaskLayer = maskLayer;
-}
 
-- (void)startCellDeleteAnimatioin {
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
-    animation.delegate = self;
-    animation.toValue = @(CGRectGetWidth(_topView.bounds) / 2 * 3);
-    animation.duration = 1;
-    animation.fillMode = kCAFillModeBoth;
-    animation.removedOnCompletion = YES;
-    [_viewMaskLayer addAnimation:animation forKey:@"cellDeleteAnimation"];
-}
+- (IBAction)rightSlideTodoTableView:(id)sender {
+    CGPoint location = [sender locationInView:_todoItemTableView];
+    NSIndexPath *indexPath = [_todoItemTableView indexPathForRowAtPoint:location];
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    NSLog(@"动画结束的时候！");
+    if (indexPath) {
+        [NSThread sleepForTimeInterval:0.1];
+        [_todoItemArr removeObjectAtIndex:indexPath.row];
+        [_todoItemTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
-
 
 #pragma mark left slide delete
 

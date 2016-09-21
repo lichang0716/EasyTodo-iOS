@@ -33,7 +33,7 @@
                                         <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ue5-JU-Pns" id="Dnq-Oz-OiU">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQm-P5-zbs">
@@ -63,7 +63,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vG8-Bl-Neg" id="d73-00-62v">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7f-ni-4mZ">
@@ -86,10 +86,12 @@
                                 </prototypes>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cDi-9a-Bbb" appends="YES" id="aOI-a4-giC"/>
+                                    <outletCollection property="gestureRecognizers" destination="gTP-h8-Ad8" appends="YES" id="t1v-1q-aXC"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="MmQ-hy-eDw" secondAttribute="trailing" constant="20" id="30f-So-nUZ"/>
                             <constraint firstItem="47l-5V-2IM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3zX-qq-Q2T"/>
@@ -103,6 +105,9 @@
                             <constraint firstItem="MmQ-hy-eDw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="kOa-aD-aKr"/>
                             <constraint firstAttribute="trailing" secondItem="47l-5V-2IM" secondAttribute="trailing" id="vaQ-U5-TNr"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="gTP-h8-Ad8" appends="YES" id="8tl-0n-6NI"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="6y1-m2-1iL">
                         <nil key="title"/>
@@ -126,6 +131,7 @@
                         <outlet property="itemDescribeTextField" destination="MmQ-hy-eDw" id="DXm-kV-sQq"/>
                         <outlet property="itemFlagSwitch" destination="yko-ol-G8G" id="BlL-Fb-APB"/>
                         <outlet property="longPressGesture" destination="cDi-9a-Bbb" id="uzI-65-MdA"/>
+                        <outlet property="rightSlideGesture" destination="gTP-h8-Ad8" id="0Fy-l4-LXW"/>
                         <outlet property="todoItemTableView" destination="47l-5V-2IM" id="x0k-gM-3VM"/>
                     </connections>
                 </viewController>
@@ -135,6 +141,11 @@
                         <action selector="longPressTodoTableView:" destination="BYZ-38-t0r" id="pob-UM-QX4"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="gTP-h8-Ad8">
+                    <connections>
+                        <action selector="rightSlideTodoTableView:" destination="BYZ-38-t0r" id="7HG-dL-yEY"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="965.60000000000002" y="-545.57721139430294"/>
         </scene>
