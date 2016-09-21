@@ -13,11 +13,13 @@
 #import "MacroDefine.h"
 #import "Util.h"
 
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> {
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, CAAnimationDelegate> {
     NSMutableArray *_todoItemArr;
     NSMutableArray *_doneItemArr;
     NSString *_itemDescribeInit;
-    TodoItem *itemWantToChange;
+    TodoItem *_itemWantToChange;
+    CALayer *_viewMaskLayer;
+    UIView *_topView;
 }
 
 @end
@@ -118,7 +120,7 @@
 
 - (void)operateItemDescribeTextField {
     if (_itemDescribeInit.length > 0 && ![_itemDescribeTextField.text isEqualToString:_itemDescribeInit]) {
-        [self modifyTodoItem:itemWantToChange];
+        [self modifyTodoItem:_itemWantToChange];
     } else if(_itemDescribeInit.length == 0 && _itemDescribeTextField.text.length > 0){
         [self insetNewTodoItem];
     }
@@ -173,7 +175,7 @@
     _todoItemTableView.alpha = 0.0;
     _doneItemTableView.alpha = 0.0;
     TodoItem *selectedItem = _todoItemArr[indexPath.row];
-    itemWantToChange = selectedItem;
+    _itemWantToChange = selectedItem;
     _itemDescribeInit = selectedItem.itemDescription;
     _itemDescribeTextField.text = _itemDescribeInit;
     _itemDescribeTextField.alpha = 1.0;
@@ -198,6 +200,33 @@
 }
 
 #pragma mark right slide mark done
+- (void)setMaskLayer:(UIView *)view {
+    CAGradientLayer *maskLayer = [CAGradientLayer layer];
+    maskLayer.position = CGPointMake(-CGRectGetWidth(view.bounds)/2, CGRectGetHeight(view.bounds) / 2);
+    maskLayer.bounds = view.bounds;
+    maskLayer.colors = @[(id)[UIColor clearColor].CGColor,
+                         (id)[UIColor whiteColor].CGColor,
+                         (id)[UIColor clearColor].CGColor,];
+    maskLayer.startPoint = CGPointMake(0, 0.5);
+    maskLayer.endPoint = CGPointMake(1, 0.5);
+    view.layer.mask = maskLayer;
+    _viewMaskLayer = maskLayer;
+}
+
+- (void)startCellDeleteAnimatioin {
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation.delegate = self;
+    animation.toValue = @(CGRectGetWidth(_topView.bounds) / 2 * 3);
+    animation.duration = 1;
+    animation.fillMode = kCAFillModeBoth;
+    animation.removedOnCompletion = YES;
+    [_viewMaskLayer addAnimation:animation forKey:@"cellDeleteAnimation"];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    NSLog(@"动画结束的时候！");
+}
+
 
 #pragma mark left slide delete
 
