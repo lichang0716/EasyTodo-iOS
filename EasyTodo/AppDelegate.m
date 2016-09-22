@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MacroDefine.h"
 
 @interface AppDelegate ()
 
@@ -49,6 +50,12 @@
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return YES;
+}
+
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    if ([shortcutItem.localizedTitle isEqualToString:NEW_ITEM]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:NEW_ITEM_NOTIFICATION_NAME object:nil];
+    }
 }
 
 @end

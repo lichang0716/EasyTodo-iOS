@@ -20,6 +20,12 @@
 
 #define DATE_FORMATTER          @"yyyy.MM.dd"
 
+#define USERDEFAULT_SUITNAME    @"group.EasyTodoSharedDefaults"
+#define USERDEFAULT_KEY         @"group.EasyTodoSharedDefaults.todoItem"
+
+#define NEW_ITEM                        @"New Item"
+#define NEW_ITEM_NOTIFICATION_NAME       @"NewTodoItem"
+
 
 
 

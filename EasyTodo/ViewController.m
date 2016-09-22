@@ -18,6 +18,7 @@
     NSMutableArray *_doneItemArr;
     NSString *_itemDescribeInit;
     TodoItem *_itemWantToChange;
+    NSMutableArray *_sharedItemArr;
 }
 
 @end
@@ -44,22 +45,21 @@
     _todoItemTableView.dataSource = self;
     _todoItemTableView.delegate = self;
     _itemDescribeTextField.delegate = self;
-    
+    // 初始化界面的空间可视性设置
     _doneItemTableView.alpha = 0.0;
-    
     _itemDescribeTextField.alpha = 0.0;
-    
+    // 初始化变量
     _itemDescribeInit = [[NSString alloc] init];
-    
-    
-    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.EasyTodoSharedDefaults"];
-    NSArray *arr = [[NSArray alloc] initWithObjects:@"Happy", @"Sad", @"Mad", @"Slient", @"Crazy", nil];
-    [userDefault setObject:arr forKey:@"group.EasyTodoSharedDefaults.todoItem"];
-    NSArray *testGetArr = [userDefault valueForKey:@"group.EasyTodoSharedDefaults.todoItem"];
-    NSLog(@"testGetArr = %@", testGetArr);
+    _sharedItemArr = [[NSMutableArray alloc] init];
+    // 添加程序失去前台的监听
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(applicationWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
+    // 添加 3D touche NewItem
+    [notificationCenter addObserver:self selector:@selector(addItem:) name:NEW_ITEM_NOTIFICATION_NAME object:nil];
 }
 
 - (void)viewDidLayoutSubviews {
+    // 给文本框设置下边框
     [Util setTextFieldBorder:_itemDescribeTextField borderColor:[UIColor lightGrayColor]];
 }
 
@@ -102,16 +102,13 @@
 }
 
 - (IBAction)addItem:(id)sender {
-//    _addItemButton.enabled = NO;
-//    [_itemDescribeTextField becomeFirstResponder];
-//    _todoItemTableView.alpha = 0.0;
-//    _doneItemTableView.alpha = 0.0;
-//    _itemDescribeTextField.alpha = 1.0;
-//    _itemDescribeInit = EMPTY_STR;
-//    _itemDescribeTextField.text = _itemDescribeInit;
-    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.EasyTodoSharedDefaults"];
-    NSArray *arr = [[NSArray alloc] initWithObjects:@"Sad", @"Mad", @"Slient", @"Crazy", nil];
-    [userDefault setObject:arr forKey:@"group.EasyTodoSharedDefaults.todoItem"];
+    _addItemButton.enabled = NO;
+    [_itemDescribeTextField becomeFirstResponder];
+    _todoItemTableView.alpha = 0.0;
+    _doneItemTableView.alpha = 0.0;
+    _itemDescribeTextField.alpha = 1.0;
+    _itemDescribeInit = EMPTY_STR;
+    _itemDescribeTextField.text = _itemDescribeInit;
 }
 
 - (void)insetNewTodoItem {
@@ -358,6 +355,17 @@
     [_doneItemArr addObject:group0];
     [_doneItemArr addObject:group1];
     [_doneItemArr addObject:group2];
+}
+
+#pragma mark Application Will Resign Active
+
+- (void)applicationWillResignActive{
+    [self saveSharedUserDefaults];
+}
+
+- (void)saveSharedUserDefaults {
+    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:USERDEFAULT_SUITNAME];
+    [userDefault setObject:@"" forKey:USERDEFAULT_KEY];
 }
 
 @end

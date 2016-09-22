@@ -36,5 +36,4 @@
  @return 字符串日期
  */
 + (NSString *)getDateFormUnixTimeStamp:(int)unixTimeStamp;
-
 @end
