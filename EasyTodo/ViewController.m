@@ -50,6 +50,13 @@
     _itemDescribeTextField.alpha = 0.0;
     
     _itemDescribeInit = [[NSString alloc] init];
+    
+    
+    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.EasyTodoSharedDefaults"];
+    NSArray *arr = [[NSArray alloc] initWithObjects:@"Happy", @"Sad", @"Mad", @"Slient", @"Crazy", nil];
+    [userDefault setObject:arr forKey:@"group.EasyTodoSharedDefaults.todoItem"];
+    NSArray *testGetArr = [userDefault valueForKey:@"group.EasyTodoSharedDefaults.todoItem"];
+    NSLog(@"testGetArr = %@", testGetArr);
 }
 
 - (void)viewDidLayoutSubviews {
@@ -95,13 +102,16 @@
 }
 
 - (IBAction)addItem:(id)sender {
-    _addItemButton.enabled = NO;
-    [_itemDescribeTextField becomeFirstResponder];
-    _todoItemTableView.alpha = 0.0;
-    _doneItemTableView.alpha = 0.0;
-    _itemDescribeTextField.alpha = 1.0;
-    _itemDescribeInit = EMPTY_STR;
-    _itemDescribeTextField.text = _itemDescribeInit;
+//    _addItemButton.enabled = NO;
+//    [_itemDescribeTextField becomeFirstResponder];
+//    _todoItemTableView.alpha = 0.0;
+//    _doneItemTableView.alpha = 0.0;
+//    _itemDescribeTextField.alpha = 1.0;
+//    _itemDescribeInit = EMPTY_STR;
+//    _itemDescribeTextField.text = _itemDescribeInit;
+    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.EasyTodoSharedDefaults"];
+    NSArray *arr = [[NSArray alloc] initWithObjects:@"Sad", @"Mad", @"Slient", @"Crazy", nil];
+    [userDefault setObject:arr forKey:@"group.EasyTodoSharedDefaults.todoItem"];
 }
 
 - (void)insetNewTodoItem {

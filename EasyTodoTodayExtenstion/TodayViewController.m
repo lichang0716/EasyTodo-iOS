@@ -23,12 +23,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _contentArr = [[NSMutableArray alloc] init];
-    [_contentArr addObject:@"todoItem a"];
-    [_contentArr addObject:@"todoItem b"];
-    [_contentArr addObject:@"todoItem c"];
-    [_contentArr addObject:@"todoItem d"];
-    [_contentArr addObject:@"todoItem e"];
+    NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:@"group.EasyTodoSharedDefaults"];
+    _contentArr = [userDefault objectForKey:@"group.EasyTodoSharedDefaults.todoItem"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +83,10 @@
     if(!cell){
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%d. %@", (int)indexPath.row, _contentArr[indexPath.row]];
+    if (_contentArr) {
+        NSLog(@"_contentArr.count = %d", (int)_contentArr.count);
+        cell.textLabel.text = [NSString stringWithFormat:@"%d. %@", (int)indexPath.row, _contentArr[indexPath.row]];
+    }
     return cell;
 }
 
