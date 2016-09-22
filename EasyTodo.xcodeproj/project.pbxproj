@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2896F81D93886000E07E54 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2896F71D93886000E07E54 /* NotificationCenter.framework */; };
+		5C2896FC1D93886000E07E54 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2896FB1D93886000E07E54 /* TodayViewController.m */; };
+		5C2896FF1D93886000E07E54 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2896FD1D93886000E07E54 /* MainInterface.storyboard */; };
+		5C2897031D93886000E07E54 /* EasyTodoTodayExtenstion.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5C3C15C01D8EC04D004DBEEF /* DoneItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */; };
 		5C3C15C31D8EC0BF004DBEEF /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15C21D8EC0BF004DBEEF /* Util.m */; };
 		5C3C15C61D8ED443004DBEEF /* TodoItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */; };
@@ -21,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5C2897011D93886000E07E54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C73856A1D8D07B10065CE41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C2896F41D93886000E07E54;
+			remoteInfo = EasyTodoTodayExtenstion;
+		};
 		5C7CB9E61D922BD900E26E8B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5C73856A1D8D07B10065CE41 /* Project object */;
@@ -30,7 +41,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5C2897071D93886000E07E54 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5C2897031D93886000E07E54 /* EasyTodoTodayExtenstion.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EasyTodoTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2896F71D93886000E07E54 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5C2896FA1D93886000E07E54 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		5C2896FB1D93886000E07E54 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		5C2896FE1D93886000E07E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5C2897001D93886000E07E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2897081D93899900E07E54 /* EasyTodo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyTodo.entitlements; sourceTree = "<group>"; };
+		5C2897091D938C2700E07E54 /* EasyTodoTodayExtenstion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyTodoTodayExtenstion.entitlements; sourceTree = "<group>"; };
 		5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneItemGroup.h; sourceTree = "<group>"; };
 		5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneItemGroup.m; sourceTree = "<group>"; };
 		5C3C15C11D8EC0BF004DBEEF /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
@@ -56,6 +89,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5C2896F21D93886000E07E54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2896F81D93886000E07E54 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C73856F1D8D07B20065CE41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +114,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C2896F61D93886000E07E54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C2896F71D93886000E07E54 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C2896F91D93886000E07E54 /* EasyTodoTodayExtenstion */ = {
+			isa = PBXGroup;
+			children = (
+				5C2897091D938C2700E07E54 /* EasyTodoTodayExtenstion.entitlements */,
+				5C2896FA1D93886000E07E54 /* TodayViewController.h */,
+				5C2896FB1D93886000E07E54 /* TodayViewController.m */,
+				5C2896FD1D93886000E07E54 /* MainInterface.storyboard */,
+				5C2897001D93886000E07E54 /* Info.plist */,
+			);
+			path = EasyTodoTodayExtenstion;
+			sourceTree = "<group>";
+		};
 		5C3C15B31D8EBD2E004DBEEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +238,8 @@
 			children = (
 				5C7385741D8D07B20065CE41 /* EasyTodo */,
 				5C7CB9E21D922BD900E26E8B /* EasyTodoTests */,
+				5C2896F91D93886000E07E54 /* EasyTodoTodayExtenstion */,
+				5C2896F61D93886000E07E54 /* Frameworks */,
 				5C7385731D8D07B20065CE41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -186,6 +249,7 @@
 			children = (
 				5C7385721D8D07B20065CE41 /* EasyTodo.app */,
 				5C7CB9E11D922BD900E26E8B /* EasyTodoTests.xctest */,
+				5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +257,7 @@
 		5C7385741D8D07B20065CE41 /* EasyTodo */ = {
 			isa = PBXGroup;
 			children = (
+				5C2897081D93899900E07E54 /* EasyTodo.entitlements */,
 				5C3C15B31D8EBD2E004DBEEF /* Model */,
 				5C3C15B41D8EBD37004DBEEF /* View */,
 				5C3C15B51D8EBD47004DBEEF /* ViewController */,
@@ -224,6 +289,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5C2896F41D93886000E07E54 /* EasyTodoTodayExtenstion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C2897061D93886000E07E54 /* Build configuration list for PBXNativeTarget "EasyTodoTodayExtenstion" */;
+			buildPhases = (
+				5C2896F11D93886000E07E54 /* Sources */,
+				5C2896F21D93886000E07E54 /* Frameworks */,
+				5C2896F31D93886000E07E54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyTodoTodayExtenstion;
+			productName = EasyTodoTodayExtenstion;
+			productReference = 5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		5C7385711D8D07B20065CE41 /* EasyTodo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C7385891D8D07B20065CE41 /* Build configuration list for PBXNativeTarget "EasyTodo" */;
@@ -231,10 +313,12 @@
 				5C73856E1D8D07B20065CE41 /* Sources */,
 				5C73856F1D8D07B20065CE41 /* Frameworks */,
 				5C7385701D8D07B20065CE41 /* Resources */,
+				5C2897071D93886000E07E54 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5C2897021D93886000E07E54 /* PBXTargetDependency */,
 			);
 			name = EasyTodo;
 			productName = EasyTodo;
@@ -268,10 +352,25 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = xyz.pwnlc;
 				TargetAttributes = {
+					5C2896F41D93886000E07E54 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8TVU93GBNX;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					5C7385711D8D07B20065CE41 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8TVU93GBNX;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					5C7CB9E01D922BD900E26E8B = {
 						CreatedOnToolsVersion = 8.0;
@@ -296,11 +395,20 @@
 			targets = (
 				5C7385711D8D07B20065CE41 /* EasyTodo */,
 				5C7CB9E01D922BD900E26E8B /* EasyTodoTests */,
+				5C2896F41D93886000E07E54 /* EasyTodoTodayExtenstion */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5C2896F31D93886000E07E54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2896FF1D93886000E07E54 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C7385701D8D07B20065CE41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +429,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5C2896F11D93886000E07E54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2896FC1D93886000E07E54 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5C73856E1D8D07B20065CE41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,6 +462,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5C2897021D93886000E07E54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C2896F41D93886000E07E54 /* EasyTodoTodayExtenstion */;
+			targetProxy = 5C2897011D93886000E07E54 /* PBXContainerItemProxy */;
+		};
 		5C7CB9E71D922BD900E26E8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5C7385711D8D07B20065CE41 /* EasyTodo */;
@@ -354,6 +475,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5C2896FD1D93886000E07E54 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C2896FE1D93886000E07E54 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		5C73857E1D8D07B20065CE41 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -373,6 +502,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5C2897041D93886000E07E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EasyTodoTodayExtenstion/EasyTodoTodayExtenstion.entitlements;
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.pwnlc.EasyTodo.EasyTodoTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5C2897051D93886000E07E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EasyTodoTodayExtenstion/EasyTodoTodayExtenstion.entitlements;
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.pwnlc.EasyTodo.EasyTodoTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		5C7385871D8D07B20065CE41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,6 +620,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyTodo/EasyTodo.entitlements;
 				DEVELOPMENT_TEAM = 8TVU93GBNX;
 				INFOPLIST_FILE = EasyTodo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -478,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyTodo/EasyTodo.entitlements;
 				DEVELOPMENT_TEAM = 8TVU93GBNX;
 				INFOPLIST_FILE = EasyTodo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -516,6 +673,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5C2897061D93886000E07E54 /* Build configuration list for PBXNativeTarget "EasyTodoTodayExtenstion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2897041D93886000E07E54 /* Debug */,
+				5C2897051D93886000E07E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		5C73856D1D8D07B20065CE41 /* Build configuration list for PBXProject "EasyTodo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -541,6 +706,7 @@
 				5C7CB9E91D922BD900E26E8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

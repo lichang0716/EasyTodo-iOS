@@ -28,22 +28,33 @@
 	<array>
 		<string>armv7</string>
 	</array>
-    <key>UIApplicationShortcutItems</key>
-    <array>
-        <dict>
-            <key>UIApplicationShortcutItemIconType</key>
-            <string>UIApplicationShortcutIconTypeCompose</string>
-            <key>UIApplicationShortcutItemTitle</key>
-            <string>New Item</string>
-            <key>UIApplicationShortcutItemType</key>
-            <string>xyz.pwnlc.easytodo.newitem</string>
-            <key>UIApplicationShortcutItemUserInfo</key>
-            <dict>
-                <key>key2</key>
-                <string>value2</string>
-            </dict>
-        </dict>
-    </array>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeCompose</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>New Item</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>xyz.pwnlc.easytodo.newitem</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict>
+				<key>key2</key>
+				<string>value2</string>
+			</dict>
+		</dict>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>appextension</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string></string>
+		</dict>
+	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
