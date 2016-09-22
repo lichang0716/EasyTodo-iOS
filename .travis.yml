@@ -1,5 +1,3 @@
 language: objective-c
-osx_image: xcode8.0
 xcode_project: EasyTodo.xcodeproj
-xcode_scheme: EasyTodo
-xcode_sdk: iphonesimulator
+xcode_scheme: EasyTodoTests
