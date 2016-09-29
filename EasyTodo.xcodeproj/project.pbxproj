@@ -680,6 +680,7 @@
 				5C2897051D93886000E07E54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5C73856D1D8D07B20065CE41 /* Build configuration list for PBXProject "EasyTodo" */ = {
 			isa = XCConfigurationList;

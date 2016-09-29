@@ -18,7 +18,7 @@
     NSMutableArray *_doneItemArr;
     NSString *_itemDescribeInit;
     TodoItem *_itemWantToChange;
-    NSMutableArray *_sharedItemArr;
+    NSArray *_sharedItemArr;
 }
 
 @end
@@ -34,9 +34,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self initData];
-    
     [_itemFlagSwitch addTarget:self
                         action:@selector(switchItemFlag)
               forControlEvents:UIControlEventValueChanged];
@@ -45,17 +42,25 @@
     _todoItemTableView.dataSource = self;
     _todoItemTableView.delegate = self;
     _itemDescribeTextField.delegate = self;
+    
     // 初始化界面的空间可视性设置
     _doneItemTableView.alpha = 0.0;
     _itemDescribeTextField.alpha = 0.0;
     // 初始化变量
+    _todoItemArr = [[NSMutableArray alloc] init];
+    _doneItemArr = [[NSMutableArray alloc] init];
     _itemDescribeInit = [[NSString alloc] init];
-    _sharedItemArr = [[NSMutableArray alloc] init];
+    _sharedItemArr = [[NSArray alloc] init];
     // 添加程序失去前台的监听
     NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
     [notificationCenter addObserver:self selector:@selector(applicationWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
     // 添加 3D touche NewItem
     [notificationCenter addObserver:self selector:@selector(addItem:) name:NEW_ITEM_NOTIFICATION_NAME object:nil];
+    // 如果是第一次启动，加载初始数据
+    if ([Util isFirstTimeLaunch]) {
+        [self initData];
+        _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
+    }
 }
 
 - (void)viewDidLayoutSubviews {
@@ -117,11 +122,15 @@
     NSInteger lastRow = [_todoItemArr indexOfObject:newTodoItem];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     [_todoItemTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    NSLog(@"_todoItemArr = %@", _todoItemArr);
+    _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
 }
 
 - (void)modifyTodoItem:(TodoItem *)todoItem {
     todoItem.itemDescription = _itemDescribeTextField.text;
     [_todoItemTableView reloadData];
+    NSLog(@"_todoItemArr = %@", _todoItemArr);
+    _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
 }
 
 - (void)operateItemDescribeTextField {
@@ -215,6 +224,8 @@
         [NSThread sleepForTimeInterval:0.1];
         [_todoItemArr removeObjectAtIndex:indexPath.row];
         [_todoItemTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        NSLog(@"_todoItemArr = %@", _todoItemArr);
+        _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
     }
 }
 
@@ -231,6 +242,8 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     [_todoItemArr removeObjectAtIndex:indexPath.row];
     [_todoItemTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    NSLog(@"_todoItemArr = %@", _todoItemArr);
+    _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
 }
 
 #pragma mark long press gesture
@@ -275,6 +288,8 @@
                 [_todoItemArr exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
                 [_todoItemTableView moveRowAtIndexPath:sourceIndexPath toIndexPath:indexPath];
                 sourceIndexPath = indexPath;
+                NSLog(@"_todoItemArr = %@", _todoItemArr);
+                _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
             }
         }
             break;
@@ -310,7 +325,6 @@
 
 #pragma mark set simulation data
 - (void)initData {
-    _todoItemArr = [[NSMutableArray alloc] init];
     TodoItem *todoItem0 = [[TodoItem alloc] initWithDescription:@"左划可以删除 item"];
     TodoItem *todoItem1 = [[TodoItem alloc] initWithDescription:@"长按可以移动 item"];
     TodoItem *todoItem2 = [[TodoItem alloc] initWithDescription:@"右划可以完成 item"];
@@ -324,37 +338,37 @@
     [_todoItemArr addObject:todoItem4];
     [_todoItemArr addObject:todoItem5];
     // ----------------------------------------------------------
-    _doneItemArr = [[NSMutableArray alloc] init];
-    TodoItem *doneItem0 = [[TodoItem alloc] initWithDescription:@"Bitcode 的问题"];
-    doneItem0.finishTime = 1474203051;
-    NSMutableArray *doneItemArrObject0 = [[NSMutableArray alloc] initWithObjects:doneItem0, nil];
-    DoneItemGroup *group0 = [[DoneItemGroup alloc] init];
-    group0.finishTime = 1474203051;
-    group0.doneItemsArr = doneItemArrObject0;
-    
-    TodoItem *doneItem1 = [[TodoItem alloc] initWithDescription:@"返回键盘不先退出"];
-    TodoItem *doneItem2 = [[TodoItem alloc] initWithDescription:@"bundle 打包"];
-    doneItem1.finishTime = 1474116646;
-    doneItem2.finishTime = 1474116650;
-    NSMutableArray *doneItemArrObject1 = [[NSMutableArray alloc] initWithObjects:doneItem1, doneItem2, nil];
-    DoneItemGroup *group1 = [[DoneItemGroup alloc] init];
-    group1.finishTime = 1474116646;
-    group1.doneItemsArr = doneItemArrObject1;
-    
-    TodoItem *doneItem3 = [[TodoItem alloc] initWithDescription:@"隐藏显示密码字体不同"];
-    TodoItem *doneItem4 = [[TodoItem alloc] initWithDescription:@"更改 SDK int 时间戳"];
-    TodoItem *doneItem5 = [[TodoItem alloc] initWithDescription:@"测试测试服务器"];
-    doneItem3.finishTime = 1474030246;
-    doneItem4.finishTime = 1474030247;
-    doneItem5.finishTime = 1474030248;
-    NSMutableArray *doneItemArrObject2 = [[NSMutableArray alloc] initWithObjects:doneItem3, doneItem4, doneItem5, nil];
-    DoneItemGroup *group2 = [[DoneItemGroup alloc] init];
-    group2.finishTime = 1474030246;
-    group2.doneItemsArr = doneItemArrObject2;
-    
-    [_doneItemArr addObject:group0];
-    [_doneItemArr addObject:group1];
-    [_doneItemArr addObject:group2];
+//    _doneItemArr = [[NSMutableArray alloc] init];
+//    TodoItem *doneItem0 = [[TodoItem alloc] initWithDescription:@"Bitcode 的问题"];
+//    doneItem0.finishTime = 1474203051;
+//    NSMutableArray *doneItemArrObject0 = [[NSMutableArray alloc] initWithObjects:doneItem0, nil];
+//    DoneItemGroup *group0 = [[DoneItemGroup alloc] init];
+//    group0.finishTime = 1474203051;
+//    group0.doneItemsArr = doneItemArrObject0;
+//    
+//    TodoItem *doneItem1 = [[TodoItem alloc] initWithDescription:@"返回键盘不先退出"];
+//    TodoItem *doneItem2 = [[TodoItem alloc] initWithDescription:@"bundle 打包"];
+//    doneItem1.finishTime = 1474116646;
+//    doneItem2.finishTime = 1474116650;
+//    NSMutableArray *doneItemArrObject1 = [[NSMutableArray alloc] initWithObjects:doneItem1, doneItem2, nil];
+//    DoneItemGroup *group1 = [[DoneItemGroup alloc] init];
+//    group1.finishTime = 1474116646;
+//    group1.doneItemsArr = doneItemArrObject1;
+//    
+//    TodoItem *doneItem3 = [[TodoItem alloc] initWithDescription:@"隐藏显示密码字体不同"];
+//    TodoItem *doneItem4 = [[TodoItem alloc] initWithDescription:@"更改 SDK int 时间戳"];
+//    TodoItem *doneItem5 = [[TodoItem alloc] initWithDescription:@"测试测试服务器"];
+//    doneItem3.finishTime = 1474030246;
+//    doneItem4.finishTime = 1474030247;
+//    doneItem5.finishTime = 1474030248;
+//    NSMutableArray *doneItemArrObject2 = [[NSMutableArray alloc] initWithObjects:doneItem3, doneItem4, doneItem5, nil];
+//    DoneItemGroup *group2 = [[DoneItemGroup alloc] init];
+//    group2.finishTime = 1474030246;
+//    group2.doneItemsArr = doneItemArrObject2;
+//    
+//    [_doneItemArr addObject:group0];
+//    [_doneItemArr addObject:group1];
+//    [_doneItemArr addObject:group2];
 }
 
 #pragma mark Application Will Resign Active
@@ -365,7 +379,25 @@
 
 - (void)saveSharedUserDefaults {
     NSUserDefaults* userDefault = [[NSUserDefaults alloc] initWithSuiteName:USERDEFAULT_SUITNAME];
-    [userDefault setObject:@"" forKey:USERDEFAULT_KEY];
+    [userDefault setObject:_sharedItemArr forKey:USERDEFAULT_KEY];
+    [userDefault synchronize];  
+}
+
+- (NSArray *)getExtenstionItemDescription:(NSMutableArray *)todoItemArr {
+    NSString *firstItemDes = [self getIndexStrFromTodoArr:0];
+    NSString *secondItemDes = [self getIndexStrFromTodoArr:1];
+    NSString *thirdItemDes = [self getIndexStrFromTodoArr:2];
+    NSArray *extenstionItemsArr = [[NSArray alloc] initWithObjects:firstItemDes, secondItemDes, thirdItemDes, nil];
+    return extenstionItemsArr;
+}
+
+- (NSString *)getIndexStrFromTodoArr:(int)index {
+    if (index < _todoItemArr.count) {
+        TodoItem *item = _todoItemArr[index];
+        return item.itemDescription;
+    } else {
+        return EMPTY_STR;
+    }
 }
 
 @end

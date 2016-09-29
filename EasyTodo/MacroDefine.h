@@ -9,6 +9,8 @@
 #ifndef MacroDefine_h
 #define MacroDefine_h
 
+#define FIRST_TIME_LAUNCH       @"FirstTimeLaunch"
+
 #define CELL_IDENTIFIER         @"TodoItemCell"
 #define EDIT                    @"Edit"
 #define DONE                    @"Done"

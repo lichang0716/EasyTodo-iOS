@@ -11,6 +11,19 @@
 
 @implementation Util
 
++ (BOOL)isFirstTimeLaunch {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:FIRST_TIME_LAUNCH]) {
+        [defaults setBool:NO forKey:FIRST_TIME_LAUNCH];
+        [defaults synchronize];
+        return NO;
+    } else {
+        [defaults setBool:YES forKey:FIRST_TIME_LAUNCH];
+        [defaults synchronize];
+        return YES;
+    }
+}
+
 + (int)getCurrentUnixTimeStamp {
     NSDate *date = [NSDate dateWithTimeIntervalSinceNow:0];
     NSTimeInterval a = [date timeIntervalSince1970];
@@ -34,6 +47,18 @@
     formatter.dateFormat = DATE_FORMATTER;
     NSString *timeStr = [formatter stringFromDate:date];
     return timeStr;
+}
+
++ (int)getDayValue:(int)UnixTimeStamp {
+    return UnixTimeStamp / DAYTIME;
+}
+
++ (NSString *)getDateStr:(int)dayIntValue {
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:dayIntValue *DAYTIME];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yy.MM.dd";
+    NSString *dateFormatterStr = [formatter stringFromDate:date];
+    return dateFormatterStr;
 }
 
 @end

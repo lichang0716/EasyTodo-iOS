@@ -12,6 +12,13 @@
 @interface Util : NSObject
 
 /**
+ 判断是否为第一次启动应用
+
+ @return 判断结果
+ */
++ (BOOL)isFirstTimeLaunch;
+
+/**
  获取当前 Unix 时间戳
 
  @return 时间戳
@@ -36,4 +43,25 @@
  @return 字符串日期
  */
 + (NSString *)getDateFormUnixTimeStamp:(int)unixTimeStamp;
+
+
+/**
+ Unix 时间戳转化为 day
+
+ @param UnixTimeStamp 时间戳
+
+ @return day int value
+ */
++ (int)getDayValue:(int)UnixTimeStamp;
+
+
+/**
+ 由 int day 转化为字符串形式显示到 tableView
+
+ @param dayIntValue int day value
+
+ @return 日期字符串形式
+ */
++ (NSString *)getDateStr:(int)dayIntValue;
+
 @end
