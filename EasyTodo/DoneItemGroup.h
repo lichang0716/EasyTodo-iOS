@@ -16,7 +16,7 @@
 /**
  items 完成的日期。
  */
-@property (nonatomic, assign) int finishTime;
+@property (nonatomic, copy) NSString *finishTime;
 
 /**
  日期内完成的 items 数组。

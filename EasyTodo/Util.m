@@ -31,6 +31,22 @@
     return timeString.intValue;
 }
 
++ (NSString *)getDateFormTimeStamp:(int)timeStamp {
+    NSDate *confromTimeStamp = [NSDate dateWithTimeIntervalSince1970:timeStamp];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YY-MM-dd"];
+    NSString *confromTimeStampStr = [formatter stringFromDate:confromTimeStamp];
+    return confromTimeStampStr;
+}
+
++ (BOOL)isSameDay:(int)timeStamp1 timeStamp2:(int)timeStamp2 {
+    if (timeStamp1 / 3600 == timeStamp2 / 3600) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 + (void)setTextFieldBorder:(UITextField *)textField borderColor:(UIColor*)color{
     CALayer *border = [CALayer layer];
     CGFloat borderWidth = 1.0;

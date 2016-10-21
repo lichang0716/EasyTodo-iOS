@@ -90,6 +90,7 @@
             }
             [_itemDescribeTextField resignFirstResponder];
             [self hiddenBarItems];
+            [_doneItemTableView reloadData];
             break;
         default:
             break;
@@ -178,7 +179,7 @@
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     if (tableView == _doneItemTableView) {
         DoneItemGroup *group = _doneItemArr[section];
-        NSString *groupName = [NSString stringWithFormat:@"%d", group.finishTime];
+        NSString *groupName = [NSString stringWithFormat:@"%@", group.finishTime];
         return groupName;
     } else {
         return nil;
@@ -219,13 +220,44 @@
 - (IBAction)rightSlideTodoTableView:(id)sender {
     CGPoint location = [sender locationInView:_todoItemTableView];
     NSIndexPath *indexPath = [_todoItemTableView indexPathForRowAtPoint:location];
-    
     if (indexPath) {
         [NSThread sleepForTimeInterval:0.1];
+        [self setDoneItemArr:_todoItemArr[indexPath.row]];
         [_todoItemArr removeObjectAtIndex:indexPath.row];
         [_todoItemTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         NSLog(@"_todoItemArr = %@", _todoItemArr);
         _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
+    }
+}
+
+- (void)setDoneItemArr:(TodoItem *)todoItem {
+    todoItem.finishTime = [Util getCurrentUnixTimeStamp];
+    /* 遍历 doneItemArr
+       如果当前时间戳已经有了，那么就直接插入
+       如果没有时间戳，那么新建 group
+    */
+    if (_doneItemArr.count < 1) {
+        todoItem.finishTime = [Util getCurrentUnixTimeStamp];
+        NSMutableArray *doneItemArrObject0 = [[NSMutableArray alloc] initWithObjects:todoItem, nil];
+        DoneItemGroup *group0 = [[DoneItemGroup alloc] init];
+        group0.finishTime = [Util getDateFormTimeStamp:todoItem.finishTime];
+        group0.doneItemsArr = doneItemArrObject0;
+        [_doneItemArr addObject:group0];
+    } else {
+        for (DoneItemGroup *doneItemGroup in _doneItemArr) {
+            if ([doneItemGroup.finishTime isEqualToString:[Util getDateFormTimeStamp:todoItem.finishTime]]) {
+                [doneItemGroup.doneItemsArr insertObject:todoItem atIndex:0];
+                todoItem.finishTime = [Util getCurrentUnixTimeStamp];
+            }
+        }
+        if (todoItem.finishTime < 1) {
+            todoItem.finishTime = [Util getCurrentUnixTimeStamp];
+            NSMutableArray *doneItemArrObject0 = [[NSMutableArray alloc] initWithObjects:todoItem, nil];
+            DoneItemGroup *group0 = [[DoneItemGroup alloc] init];
+            group0.finishTime = [Util getDateFormTimeStamp:todoItem.finishTime];
+            group0.doneItemsArr = doneItemArrObject0;
+            [_doneItemArr addObject:group0];
+        }
     }
 }
 

@@ -25,6 +25,25 @@
  */
 + (int)getCurrentUnixTimeStamp;
 
+/**
+ 从时间戳获取相应的字符串形式日期
+
+ @param timeStamp 时间戳
+
+ @return 字符串日期格式
+ */
++ (NSString *)getDateFormTimeStamp:(int)timeStamp;
+
+/**
+ 判断两个时间戳是否为同一天
+
+ @param timeStamp1 时间戳1
+ @param timeStamp2 时间戳2
+
+ @return 是否为同一天
+ */
++ (BOOL)isSameDay:(int)timeStamp1 timeStamp2:(int)timeStamp2;
+
 
 /**
  给 textField 设置边框
