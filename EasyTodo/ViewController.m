@@ -84,10 +84,10 @@
         case 1:
             _todoItemTableView.alpha = 0.0;
             _doneItemTableView.alpha = 1.0;
-            if (_itemDescribeTextField.alpha > 0) {
-                _itemDescribeTextField.alpha = 0.0;
-                [self operateItemDescribeTextField];
-            }
+//            if (_itemDescribeTextField.alpha > 0) {
+//                _itemDescribeTextField.alpha = 0.0;
+////                [self operateItemDescribeTextField];
+//            }
             [_itemDescribeTextField resignFirstResponder];
             [self hiddenBarItems];
             [_doneItemTableView reloadData];
