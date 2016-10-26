@@ -1,8 +1,6 @@
 language: objective-c
 osx_image: xcode8
 xcode_project: EasyTodo.xcodeproj
-before_install:
-    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
 xcode_sdk: iphonesimulator10.0
 script:
   xcodebuild -project EasyTodo.xcodeproj -scheme EasyTodo -configuration Debug -sdk iphonesimulator -destination 'name=iPhone 7' test
