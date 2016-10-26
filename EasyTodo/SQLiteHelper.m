@@ -108,22 +108,23 @@
         NSLog(@"查询成功！😄");
         while (sqlite3_step(statement) == SQLITE_ROW) {
             TodoItem *item = [[TodoItem alloc] init];
-            item.itemDescription = [NSString stringWithFormat:@"%s", sqlite3_column_text(statement, 0)];
+            item.itemDescription =  [NSString stringWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
             item.createTime = sqlite3_column_int(statement, 1);
             item.finishTime = sqlite3_column_int(statement, 2);
             item.status = sqlite3_column_int(statement, 3);
             item.position = sqlite3_column_int(statement, 4);
-//            [todoItemArr insertObject:item atIndex:item.position];
             [todoItemArr addObject:item];
-            NSLog(@"是这里出错的吗？？？？？");
         }
     } else {
         NSLog(@"查询失败！");
     }
-    NSSortDescriptor *itemPositionDesc = [NSSortDescriptor sortDescriptorWithKey:@"position" ascending:YES];
-    NSSortDescriptor *itemStatusDesc = [NSSortDescriptor sortDescriptorWithKey:@"status" ascending:YES];
-    NSArray *descriptorArray = [NSArray arrayWithObjects:itemPositionDesc, itemStatusDesc, nil];
-    todoItemArr = (NSMutableArray *)[todoItemArr sortedArrayUsingDescriptors: descriptorArray];
+    // 这里需要进行一下排序，以便于显示
+    if (todoItemArr.count > 0) {
+        NSSortDescriptor *itemPositionDesc = [NSSortDescriptor sortDescriptorWithKey:@"position" ascending:YES];
+        NSSortDescriptor *itemStatusDesc = [NSSortDescriptor sortDescriptorWithKey:@"status" ascending:YES];
+        NSArray *descriptorArray = [NSArray arrayWithObjects:itemPositionDesc, itemStatusDesc, nil];
+        todoItemArr = (NSMutableArray *)[todoItemArr sortedArrayUsingDescriptors: descriptorArray];
+    }
     sqlite3_close(database);
     return todoItemArr;
 }
