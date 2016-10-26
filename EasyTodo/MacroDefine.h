@@ -27,6 +27,7 @@
 
 #define NEW_ITEM                        @"New Item"
 #define NEW_ITEM_NOTIFICATION_NAME       @"NewTodoItem"
+#define APP_ENTER_BACKGROUND            @"enterBackground"
 
 
 

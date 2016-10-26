@@ -1,1946 +1,910 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>1F2FA52C4D1968175C7AE9AC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EasyTodoTodayExtenstion.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>29D17F8DAD0882DE92630AC9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C24BBA64E2E76ABE61B3E854</string>
-				<string>E2AD83C08B57EE991B13E213</string>
-				<string>79525DEEF1DDD91029F4EABD</string>
-				<string>F0D9A674E9E12706956D209C</string>
-				<string>7F2C8A55A6DA36E0C6C87A7E</string>
-				<string>1F2FA52C4D1968175C7AE9AC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>42C72F18DDEE1B0861A15AD3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-EasyTodoTests.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4489568ACEA467906EC1C293</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>44CA7628B69740A0A98141FD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>52A2783FEDC99D11BEE9A142</key>
-		<dict>
-			<key>fileRef</key>
-			<string>74F93A18C4CE1C243B857D47</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5A3689D46F5610E748977BA1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>5C2896F11D93886000E07E54</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5C2896FC1D93886000E07E54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C2896F21D93886000E07E54</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5C2896F81D93886000E07E54</string>
-				<string>52A2783FEDC99D11BEE9A142</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C2896F31D93886000E07E54</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5C2896FF1D93886000E07E54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C2896F41D93886000E07E54</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5C2897061D93886000E07E54</string>
-			<key>buildPhases</key>
-			<array>
-				<string>44CA7628B69740A0A98141FD</string>
-				<string>5C2896F11D93886000E07E54</string>
-				<string>5C2896F21D93886000E07E54</string>
-				<string>5C2896F31D93886000E07E54</string>
-				<string>DEC58BCC806B12332532C0D7</string>
-				<string>B593825D2A6F0659FF85A508</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>EasyTodoTodayExtenstion</string>
-			<key>productName</key>
-			<string>EasyTodoTodayExtenstion</string>
-			<key>productReference</key>
-			<string>5C2896F51D93886000E07E54</string>
-			<key>productType</key>
-			<string>com.apple.product-type.app-extension</string>
-		</dict>
-		<key>5C2896F51D93886000E07E54</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.app-extension</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>EasyTodoTodayExtenstion.appex</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5C2896F61D93886000E07E54</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C2896F71D93886000E07E54</string>
-				<string>E7EB909E07740FAFB1ECC4CB</string>
-				<string>42C72F18DDEE1B0861A15AD3</string>
-				<string>74F93A18C4CE1C243B857D47</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2896F71D93886000E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>NotificationCenter.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/NotificationCenter.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>5C2896F81D93886000E07E54</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C2896F71D93886000E07E54</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C2896F91D93886000E07E54</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C2897091D938C2700E07E54</string>
-				<string>5C2896FA1D93886000E07E54</string>
-				<string>5C2896FB1D93886000E07E54</string>
-				<string>5C2896FD1D93886000E07E54</string>
-				<string>5C2897001D93886000E07E54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>EasyTodoTodayExtenstion</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2896FA1D93886000E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TodayViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2896FB1D93886000E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TodayViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2896FC1D93886000E07E54</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C2896FB1D93886000E07E54</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C2896FD1D93886000E07E54</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C2896FE1D93886000E07E54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>MainInterface.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2896FE1D93886000E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/MainInterface.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2896FF1D93886000E07E54</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C2896FD1D93886000E07E54</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C2897001D93886000E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2897011D93886000E07E54</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5C73856A1D8D07B10065CE41</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5C2896F41D93886000E07E54</string>
-			<key>remoteInfo</key>
-			<string>EasyTodoTodayExtenstion</string>
-		</dict>
-		<key>5C2897021D93886000E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5C2896F41D93886000E07E54</string>
-			<key>targetProxy</key>
-			<string>5C2897011D93886000E07E54</string>
-		</dict>
-		<key>5C2897031D93886000E07E54</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C2896F51D93886000E07E54</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>RemoveHeadersOnCopy</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5C2897041D93886000E07E54</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7F2C8A55A6DA36E0C6C87A7E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>EasyTodoTodayExtenstion/EasyTodoTodayExtenstion.entitlements</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>8TVU93GBNX</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EasyTodoTodayExtenstion/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>xyz.pwnlc.EasyTodo.EasyTodoTodayExtenstion</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5C2897051D93886000E07E54</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1F2FA52C4D1968175C7AE9AC</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>EasyTodoTodayExtenstion/EasyTodoTodayExtenstion.entitlements</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>8TVU93GBNX</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EasyTodoTodayExtenstion/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>xyz.pwnlc.EasyTodo.EasyTodoTodayExtenstion</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5C2897061D93886000E07E54</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5C2897041D93886000E07E54</string>
-				<string>5C2897051D93886000E07E54</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5C2897071D93886000E07E54</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string></string>
-			<key>dstSubfolderSpec</key>
-			<string>13</string>
-			<key>files</key>
-			<array>
-				<string>5C2897031D93886000E07E54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>name</key>
-			<string>Embed App Extensions</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C2897081D93899900E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.entitlements</string>
-			<key>path</key>
-			<string>EasyTodo.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C2897091D938C2700E07E54</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.entitlements</string>
-			<key>path</key>
-			<string>EasyTodoTodayExtenstion.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15B31D8EBD2E004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C9493221D8EB9FA002A7EB4</string>
-				<string>5C9493231D8EB9FA002A7EB4</string>
-				<string>5C3C15BE1D8EC04D004DBEEF</string>
-				<string>5C3C15BF1D8EC04D004DBEEF</string>
-				<string>5C7CB9DC1D92266400E26E8B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Model</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15B41D8EBD37004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C73857E1D8D07B20065CE41</string>
-				<string>5C7385831D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>View</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15B51D8EBD47004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C73857B1D8D07B20065CE41</string>
-				<string>5C73857C1D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>ViewController</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15B61D8EBD55004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C3C15BD1D8EBE38004DBEEF</string>
-				<string>5C3C15BC1D8EBE31004DBEEF</string>
-				<string>5C3C15BB1D8EBE29004DBEEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Expand</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15B71D8EBD63004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C3C15BA1D8EBDAA004DBEEF</string>
-				<string>5C3C15B91D8EBDA3004DBEEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resource</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15B81D8EBD7C004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C7385781D8D07B20065CE41</string>
-				<string>5C7385791D8D07B20065CE41</string>
-				<string>5C7385761D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Other</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15B91D8EBDA3004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C7385811D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Image</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15BA1D8EBDAA004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C7385861D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15BB1D8EBE29004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C51A2D71D8F8C7100FBF37A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Macros</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15BC1D8EBE31004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C3C15C11D8EC0BF004DBEEF</string>
-				<string>5C3C15C21D8EC0BF004DBEEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Tool</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15BD1D8EBE38004DBEEF</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Network</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15BE1D8EC04D004DBEEF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>DoneItemGroup.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15BF1D8EC04D004DBEEF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>DoneItemGroup.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15C01D8EC04D004DBEEF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C3C15BF1D8EC04D004DBEEF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C3C15C11D8EC0BF004DBEEF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Util.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15C21D8EC0BF004DBEEF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Util.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15C31D8EC0BF004DBEEF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C3C15C21D8EC0BF004DBEEF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C3C15C41D8ED443004DBEEF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TodoItemTableViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15C51D8ED443004DBEEF</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TodoItemTableViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C3C15C61D8ED443004DBEEF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C3C15C51D8ED443004DBEEF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C51A2D71D8F8C7100FBF37A</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MacroDefine.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385691D8D07B10065CE41</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C7385741D8D07B20065CE41</string>
-				<string>5C7CB9E21D922BD900E26E8B</string>
-				<string>5C2896F91D93886000E07E54</string>
-				<string>5C2896F61D93886000E07E54</string>
-				<string>5C7385731D8D07B20065CE41</string>
-				<string>29D17F8DAD0882DE92630AC9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C73856A1D8D07B10065CE41</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0800</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>xyz.pwnlc</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>5C2896F41D93886000E07E54</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>DevelopmentTeam</key>
-						<string>8TVU93GBNX</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.ApplicationGroups.iOS</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>5C7385711D8D07B20065CE41</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>DevelopmentTeam</key>
-						<string>8TVU93GBNX</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.ApplicationGroups.iOS</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>5C7CB9E01D922BD900E26E8B</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>DevelopmentTeam</key>
-						<string>8TVU93GBNX</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>5C7385711D8D07B20065CE41</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>5C73856D1D8D07B20065CE41</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>5C7385691D8D07B10065CE41</string>
-			<key>productRefGroup</key>
-			<string>5C7385731D8D07B20065CE41</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>5C7385711D8D07B20065CE41</string>
-				<string>5C7CB9E01D922BD900E26E8B</string>
-				<string>5C2896F41D93886000E07E54</string>
-			</array>
-		</dict>
-		<key>5C73856D1D8D07B20065CE41</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5C7385871D8D07B20065CE41</string>
-				<string>5C7385881D8D07B20065CE41</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5C73856E1D8D07B20065CE41</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5C73857D1D8D07B20065CE41</string>
-				<string>5C73857A1D8D07B20065CE41</string>
-				<string>5C3C15C01D8EC04D004DBEEF</string>
-				<string>5C9493241D8EB9FA002A7EB4</string>
-				<string>5C3C15C61D8ED443004DBEEF</string>
-				<string>5C7385771D8D07B20065CE41</string>
-				<string>5C3C15C31D8EC0BF004DBEEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C73856F1D8D07B20065CE41</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EC772AA6C6CD917B0FE6C1CE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C7385701D8D07B20065CE41</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5C7385851D8D07B20065CE41</string>
-				<string>5C7385821D8D07B20065CE41</string>
-				<string>5C7385801D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C7385711D8D07B20065CE41</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5C7385891D8D07B20065CE41</string>
-			<key>buildPhases</key>
-			<array>
-				<string>4489568ACEA467906EC1C293</string>
-				<string>5C73856E1D8D07B20065CE41</string>
-				<string>5C73856F1D8D07B20065CE41</string>
-				<string>5C7385701D8D07B20065CE41</string>
-				<string>5C2897071D93886000E07E54</string>
-				<string>A46FD5B24B058655805203A0</string>
-				<string>68B4015976B0E70DE68EC4CB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5C2897021D93886000E07E54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>EasyTodo</string>
-			<key>productName</key>
-			<string>EasyTodo</string>
-			<key>productReference</key>
-			<string>5C7385721D8D07B20065CE41</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>5C7385721D8D07B20065CE41</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>EasyTodo.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5C7385731D8D07B20065CE41</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C7385721D8D07B20065CE41</string>
-				<string>5C7CB9E11D922BD900E26E8B</string>
-				<string>5C2896F51D93886000E07E54</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385741D8D07B20065CE41</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C2897081D93899900E07E54</string>
-				<string>5C3C15B31D8EBD2E004DBEEF</string>
-				<string>5C3C15B41D8EBD37004DBEEF</string>
-				<string>5C3C15B51D8EBD47004DBEEF</string>
-				<string>5C3C15B61D8EBD55004DBEEF</string>
-				<string>5C3C15B71D8EBD63004DBEEF</string>
-				<string>5C3C15B81D8EBD7C004DBEEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>EasyTodo</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385761D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385771D8D07B20065CE41</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C7385761D8D07B20065CE41</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C7385781D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385791D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C73857A1D8D07B20065CE41</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C7385791D8D07B20065CE41</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C73857B1D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>ViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C73857C1D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>ViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C73857D1D8D07B20065CE41</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C73857C1D8D07B20065CE41</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C73857E1D8D07B20065CE41</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C73857F1D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C73857F1D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385801D8D07B20065CE41</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C73857E1D8D07B20065CE41</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C7385811D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385821D8D07B20065CE41</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C7385811D8D07B20065CE41</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C7385831D8D07B20065CE41</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C7385841D8D07B20065CE41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385841D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385851D8D07B20065CE41</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C7385831D8D07B20065CE41</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C7385861D8D07B20065CE41</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7385871D8D07B20065CE41</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5C7385881D8D07B20065CE41</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5C7385891D8D07B20065CE41</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5C73858A1D8D07B20065CE41</string>
-				<string>5C73858B1D8D07B20065CE41</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5C73858A1D8D07B20065CE41</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C24BBA64E2E76ABE61B3E854</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>EasyTodo/EasyTodo.entitlements</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>8TVU93GBNX</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EasyTodo/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>xyz.pwnlc.EasyTodo</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5C73858B1D8D07B20065CE41</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>E2AD83C08B57EE991B13E213</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>EasyTodo/EasyTodo.entitlements</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>8TVU93GBNX</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EasyTodo/Info.plist</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>8.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>xyz.pwnlc.EasyTodo</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5C7CB9DC1D92266400E26E8B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C3C15C41D8ED443004DBEEF</string>
-				<string>5C3C15C51D8ED443004DBEEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Cell</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7CB9DD1D922BD900E26E8B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>5C7CB9E41D922BD900E26E8B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C7CB9DE1D922BD900E26E8B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F2A0BE1A61467DD8EB0B5BDA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C7CB9DF1D922BD900E26E8B</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5C7CB9E01D922BD900E26E8B</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>5C7CB9EA1D922BD900E26E8B</string>
-			<key>buildPhases</key>
-			<array>
-				<string>5A3689D46F5610E748977BA1</string>
-				<string>5C7CB9DD1D922BD900E26E8B</string>
-				<string>5C7CB9DE1D922BD900E26E8B</string>
-				<string>5C7CB9DF1D922BD900E26E8B</string>
-				<string>899F68B96CB1E866D88AC4CC</string>
-				<string>8B2530DEF467AC07CD89F74F</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>5C7CB9E71D922BD900E26E8B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>EasyTodoTests</string>
-			<key>productName</key>
-			<string>EasyTodoTests</string>
-			<key>productReference</key>
-			<string>5C7CB9E11D922BD900E26E8B</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>5C7CB9E11D922BD900E26E8B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>EasyTodoTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>5C7CB9E21D922BD900E26E8B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5C7CB9E31D922BD900E26E8B</string>
-				<string>5C7CB9E51D922BD900E26E8B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>EasyTodoTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7CB9E31D922BD900E26E8B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>EasyTodoTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7CB9E41D922BD900E26E8B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C7CB9E31D922BD900E26E8B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5C7CB9E51D922BD900E26E8B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C7CB9E61D922BD900E26E8B</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>5C73856A1D8D07B10065CE41</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5C7385711D8D07B20065CE41</string>
-			<key>remoteInfo</key>
-			<string>EasyTodo</string>
-		</dict>
-		<key>5C7CB9E71D922BD900E26E8B</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>5C7385711D8D07B20065CE41</string>
-			<key>targetProxy</key>
-			<string>5C7CB9E61D922BD900E26E8B</string>
-		</dict>
-		<key>5C7CB9E81D922BD900E26E8B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>79525DEEF1DDD91029F4EABD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>8TVU93GBNX</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EasyTodoTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>xyz.amute.EasyTodoTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/EasyTodo.app/EasyTodo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>5C7CB9E91D922BD900E26E8B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F0D9A674E9E12706956D209C</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>8TVU93GBNX</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EasyTodoTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>xyz.amute.EasyTodoTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/EasyTodo.app/EasyTodo</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5C7CB9EA1D922BD900E26E8B</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>5C7CB9E81D922BD900E26E8B</string>
-				<string>5C7CB9E91D922BD900E26E8B</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>5C9493221D8EB9FA002A7EB4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>TodoItem.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C9493231D8EB9FA002A7EB4</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>TodoItem.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5C9493241D8EB9FA002A7EB4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C9493231D8EB9FA002A7EB4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>68B4015976B0E70DE68EC4CB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>74F93A18C4CE1C243B857D47</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-EasyTodoTodayExtenstion.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>79525DEEF1DDD91029F4EABD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EasyTodoTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7F2C8A55A6DA36E0C6C87A7E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EasyTodoTodayExtenstion.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>899F68B96CB1E866D88AC4CC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>8B2530DEF467AC07CD89F74F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>A46FD5B24B058655805203A0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B593825D2A6F0659FF85A508</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>C24BBA64E2E76ABE61B3E854</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EasyTodo.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEC58BCC806B12332532C0D7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>E2AD83C08B57EE991B13E213</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EasyTodo.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E7EB909E07740FAFB1ECC4CB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-EasyTodo.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>EC772AA6C6CD917B0FE6C1CE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E7EB909E07740FAFB1ECC4CB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F0D9A674E9E12706956D209C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EasyTodoTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F2A0BE1A61467DD8EB0B5BDA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>42C72F18DDEE1B0861A15AD3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>5C73856A1D8D07B10065CE41</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52A2783FEDC99D11BEE9A142 /* libPods-EasyTodoTodayExtenstion.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F93A18C4CE1C243B857D47 /* libPods-EasyTodoTodayExtenstion.a */; };
+		5C2896F81D93886000E07E54 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2896F71D93886000E07E54 /* NotificationCenter.framework */; };
+		5C2896FC1D93886000E07E54 /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2896FB1D93886000E07E54 /* TodayViewController.m */; };
+		5C2896FF1D93886000E07E54 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2896FD1D93886000E07E54 /* MainInterface.storyboard */; };
+		5C2897031D93886000E07E54 /* EasyTodoTodayExtenstion.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5C3C15C01D8EC04D004DBEEF /* DoneItemGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */; };
+		5C3C15C31D8EC0BF004DBEEF /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15C21D8EC0BF004DBEEF /* Util.m */; };
+		5C3C15C61D8ED443004DBEEF /* TodoItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */; };
+		5C5A340B1DBF44A000F8188B /* SQLiteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A340A1DBF44A000F8188B /* SQLiteHelper.m */; };
+		5C5A340D1DBF450300F8188B /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5A340C1DBF450300F8188B /* libsqlite3.0.tbd */; };
+		5C7385771D8D07B20065CE41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7385761D8D07B20065CE41 /* main.m */; };
+		5C73857A1D8D07B20065CE41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7385791D8D07B20065CE41 /* AppDelegate.m */; };
+		5C73857D1D8D07B20065CE41 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C73857C1D8D07B20065CE41 /* ViewController.m */; };
+		5C7385801D8D07B20065CE41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C73857E1D8D07B20065CE41 /* Main.storyboard */; };
+		5C7385821D8D07B20065CE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7385811D8D07B20065CE41 /* Assets.xcassets */; };
+		5C7385851D8D07B20065CE41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7385831D8D07B20065CE41 /* LaunchScreen.storyboard */; };
+		5C7CB9E41D922BD900E26E8B /* EasyTodoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7CB9E31D922BD900E26E8B /* EasyTodoTests.m */; };
+		5C9493241D8EB9FA002A7EB4 /* TodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9493231D8EB9FA002A7EB4 /* TodoItem.m */; };
+		EC772AA6C6CD917B0FE6C1CE /* libPods-EasyTodo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7EB909E07740FAFB1ECC4CB /* libPods-EasyTodo.a */; };
+		F2A0BE1A61467DD8EB0B5BDA /* libPods-EasyTodoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C72F18DDEE1B0861A15AD3 /* libPods-EasyTodoTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C2897011D93886000E07E54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C73856A1D8D07B10065CE41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C2896F41D93886000E07E54;
+			remoteInfo = EasyTodoTodayExtenstion;
+		};
+		5C7CB9E61D922BD900E26E8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C73856A1D8D07B10065CE41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7385711D8D07B20065CE41;
+			remoteInfo = EasyTodo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5C2897071D93886000E07E54 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5C2897031D93886000E07E54 /* EasyTodoTodayExtenstion.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1F2FA52C4D1968175C7AE9AC /* Pods-EasyTodoTodayExtenstion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTodoTodayExtenstion.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion.release.xcconfig"; sourceTree = "<group>"; };
+		42C72F18DDEE1B0861A15AD3 /* libPods-EasyTodoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTodoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = EasyTodoTodayExtenstion.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2896F71D93886000E07E54 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		5C2896FA1D93886000E07E54 /* TodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodayViewController.h; sourceTree = "<group>"; };
+		5C2896FB1D93886000E07E54 /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
+		5C2896FE1D93886000E07E54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		5C2897001D93886000E07E54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C2897081D93899900E07E54 /* EasyTodo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyTodo.entitlements; sourceTree = "<group>"; };
+		5C2897091D938C2700E07E54 /* EasyTodoTodayExtenstion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyTodoTodayExtenstion.entitlements; sourceTree = "<group>"; };
+		5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneItemGroup.h; sourceTree = "<group>"; };
+		5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneItemGroup.m; sourceTree = "<group>"; };
+		5C3C15C11D8EC0BF004DBEEF /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		5C3C15C21D8EC0BF004DBEEF /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		5C3C15C41D8ED443004DBEEF /* TodoItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItemTableViewCell.h; sourceTree = "<group>"; };
+		5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItemTableViewCell.m; sourceTree = "<group>"; };
+		5C51A2D71D8F8C7100FBF37A /* MacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacroDefine.h; sourceTree = "<group>"; };
+		5C5A34091DBF44A000F8188B /* SQLiteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteHelper.h; sourceTree = "<group>"; };
+		5C5A340A1DBF44A000F8188B /* SQLiteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteHelper.m; sourceTree = "<group>"; };
+		5C5A340C1DBF450300F8188B /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		5C7385721D8D07B20065CE41 /* EasyTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7385761D8D07B20065CE41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C7385781D8D07B20065CE41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C7385791D8D07B20065CE41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C73857B1D8D07B20065CE41 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5C73857C1D8D07B20065CE41 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C73857F1D8D07B20065CE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C7385811D8D07B20065CE41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C7385841D8D07B20065CE41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C7385861D8D07B20065CE41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7CB9E11D922BD900E26E8B /* EasyTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7CB9E31D922BD900E26E8B /* EasyTodoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyTodoTests.m; sourceTree = "<group>"; };
+		5C7CB9E51D922BD900E26E8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C9493221D8EB9FA002A7EB4 /* TodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItem.h; sourceTree = "<group>"; };
+		5C9493231D8EB9FA002A7EB4 /* TodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItem.m; sourceTree = "<group>"; };
+		74F93A18C4CE1C243B857D47 /* libPods-EasyTodoTodayExtenstion.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTodoTodayExtenstion.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		79525DEEF1DDD91029F4EABD /* Pods-EasyTodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTodoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F2C8A55A6DA36E0C6C87A7E /* Pods-EasyTodoTodayExtenstion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTodoTodayExtenstion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion.debug.xcconfig"; sourceTree = "<group>"; };
+		C24BBA64E2E76ABE61B3E854 /* Pods-EasyTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo.debug.xcconfig"; sourceTree = "<group>"; };
+		E2AD83C08B57EE991B13E213 /* Pods-EasyTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo.release.xcconfig"; sourceTree = "<group>"; };
+		E7EB909E07740FAFB1ECC4CB /* libPods-EasyTodo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EasyTodo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0D9A674E9E12706956D209C /* Pods-EasyTodoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyTodoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C2896F21D93886000E07E54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2896F81D93886000E07E54 /* NotificationCenter.framework in Frameworks */,
+				52A2783FEDC99D11BEE9A142 /* libPods-EasyTodoTodayExtenstion.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C73856F1D8D07B20065CE41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5A340D1DBF450300F8188B /* libsqlite3.0.tbd in Frameworks */,
+				EC772AA6C6CD917B0FE6C1CE /* libPods-EasyTodo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7CB9DE1D922BD900E26E8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2A0BE1A61467DD8EB0B5BDA /* libPods-EasyTodoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29D17F8DAD0882DE92630AC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C24BBA64E2E76ABE61B3E854 /* Pods-EasyTodo.debug.xcconfig */,
+				E2AD83C08B57EE991B13E213 /* Pods-EasyTodo.release.xcconfig */,
+				79525DEEF1DDD91029F4EABD /* Pods-EasyTodoTests.debug.xcconfig */,
+				F0D9A674E9E12706956D209C /* Pods-EasyTodoTests.release.xcconfig */,
+				7F2C8A55A6DA36E0C6C87A7E /* Pods-EasyTodoTodayExtenstion.debug.xcconfig */,
+				1F2FA52C4D1968175C7AE9AC /* Pods-EasyTodoTodayExtenstion.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C2896F61D93886000E07E54 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A340C1DBF450300F8188B /* libsqlite3.0.tbd */,
+				5C2896F71D93886000E07E54 /* NotificationCenter.framework */,
+				E7EB909E07740FAFB1ECC4CB /* libPods-EasyTodo.a */,
+				42C72F18DDEE1B0861A15AD3 /* libPods-EasyTodoTests.a */,
+				74F93A18C4CE1C243B857D47 /* libPods-EasyTodoTodayExtenstion.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C2896F91D93886000E07E54 /* EasyTodoTodayExtenstion */ = {
+			isa = PBXGroup;
+			children = (
+				5C2897091D938C2700E07E54 /* EasyTodoTodayExtenstion.entitlements */,
+				5C2896FA1D93886000E07E54 /* TodayViewController.h */,
+				5C2896FB1D93886000E07E54 /* TodayViewController.m */,
+				5C2896FD1D93886000E07E54 /* MainInterface.storyboard */,
+				5C2897001D93886000E07E54 /* Info.plist */,
+			);
+			path = EasyTodoTodayExtenstion;
+			sourceTree = "<group>";
+		};
+		5C3C15B31D8EBD2E004DBEEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C9493221D8EB9FA002A7EB4 /* TodoItem.h */,
+				5C9493231D8EB9FA002A7EB4 /* TodoItem.m */,
+				5C3C15BE1D8EC04D004DBEEF /* DoneItemGroup.h */,
+				5C3C15BF1D8EC04D004DBEEF /* DoneItemGroup.m */,
+				5C7CB9DC1D92266400E26E8B /* Cell */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5C3C15B41D8EBD37004DBEEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C73857E1D8D07B20065CE41 /* Main.storyboard */,
+				5C7385831D8D07B20065CE41 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5C3C15B51D8EBD47004DBEEF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5C73857B1D8D07B20065CE41 /* ViewController.h */,
+				5C73857C1D8D07B20065CE41 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		5C3C15B61D8EBD55004DBEEF /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15BD1D8EBE38004DBEEF /* Network */,
+				5C3C15BC1D8EBE31004DBEEF /* Tool */,
+				5C3C15BB1D8EBE29004DBEEF /* Macros */,
+			);
+			name = Expand;
+			sourceTree = "<group>";
+		};
+		5C3C15B71D8EBD63004DBEEF /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15BA1D8EBDAA004DBEEF /* Plist */,
+				5C3C15B91D8EBDA3004DBEEF /* Image */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		5C3C15B81D8EBD7C004DBEEF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5C7385781D8D07B20065CE41 /* AppDelegate.h */,
+				5C7385791D8D07B20065CE41 /* AppDelegate.m */,
+				5C7385761D8D07B20065CE41 /* main.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		5C3C15B91D8EBDA3004DBEEF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5C7385811D8D07B20065CE41 /* Assets.xcassets */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		5C3C15BA1D8EBDAA004DBEEF /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				5C7385861D8D07B20065CE41 /* Info.plist */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		5C3C15BB1D8EBE29004DBEEF /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				5C51A2D71D8F8C7100FBF37A /* MacroDefine.h */,
+			);
+			name = Macros;
+			sourceTree = "<group>";
+		};
+		5C3C15BC1D8EBE31004DBEEF /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15C11D8EC0BF004DBEEF /* Util.h */,
+				5C3C15C21D8EC0BF004DBEEF /* Util.m */,
+				5C5A34091DBF44A000F8188B /* SQLiteHelper.h */,
+				5C5A340A1DBF44A000F8188B /* SQLiteHelper.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		5C3C15BD1D8EBE38004DBEEF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		5C7385691D8D07B10065CE41 = {
+			isa = PBXGroup;
+			children = (
+				5C7385741D8D07B20065CE41 /* EasyTodo */,
+				5C7CB9E21D922BD900E26E8B /* EasyTodoTests */,
+				5C2896F91D93886000E07E54 /* EasyTodoTodayExtenstion */,
+				5C2896F61D93886000E07E54 /* Frameworks */,
+				5C7385731D8D07B20065CE41 /* Products */,
+				29D17F8DAD0882DE92630AC9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		5C7385731D8D07B20065CE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C7385721D8D07B20065CE41 /* EasyTodo.app */,
+				5C7CB9E11D922BD900E26E8B /* EasyTodoTests.xctest */,
+				5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C7385741D8D07B20065CE41 /* EasyTodo */ = {
+			isa = PBXGroup;
+			children = (
+				5C2897081D93899900E07E54 /* EasyTodo.entitlements */,
+				5C3C15B31D8EBD2E004DBEEF /* Model */,
+				5C3C15B41D8EBD37004DBEEF /* View */,
+				5C3C15B51D8EBD47004DBEEF /* ViewController */,
+				5C3C15B61D8EBD55004DBEEF /* Expand */,
+				5C3C15B71D8EBD63004DBEEF /* Resource */,
+				5C3C15B81D8EBD7C004DBEEF /* Other */,
+			);
+			path = EasyTodo;
+			sourceTree = "<group>";
+		};
+		5C7CB9DC1D92266400E26E8B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C3C15C41D8ED443004DBEEF /* TodoItemTableViewCell.h */,
+				5C3C15C51D8ED443004DBEEF /* TodoItemTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		5C7CB9E21D922BD900E26E8B /* EasyTodoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7CB9E31D922BD900E26E8B /* EasyTodoTests.m */,
+				5C7CB9E51D922BD900E26E8B /* Info.plist */,
+			);
+			path = EasyTodoTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C2896F41D93886000E07E54 /* EasyTodoTodayExtenstion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C2897061D93886000E07E54 /* Build configuration list for PBXNativeTarget "EasyTodoTodayExtenstion" */;
+			buildPhases = (
+				44CA7628B69740A0A98141FD /* Check Pods Manifest.lock */,
+				5C2896F11D93886000E07E54 /* Sources */,
+				5C2896F21D93886000E07E54 /* Frameworks */,
+				5C2896F31D93886000E07E54 /* Resources */,
+				DEC58BCC806B12332532C0D7 /* Embed Pods Frameworks */,
+				B593825D2A6F0659FF85A508 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyTodoTodayExtenstion;
+			productName = EasyTodoTodayExtenstion;
+			productReference = 5C2896F51D93886000E07E54 /* EasyTodoTodayExtenstion.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		5C7385711D8D07B20065CE41 /* EasyTodo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7385891D8D07B20065CE41 /* Build configuration list for PBXNativeTarget "EasyTodo" */;
+			buildPhases = (
+				4489568ACEA467906EC1C293 /* Check Pods Manifest.lock */,
+				5C73856E1D8D07B20065CE41 /* Sources */,
+				5C73856F1D8D07B20065CE41 /* Frameworks */,
+				5C7385701D8D07B20065CE41 /* Resources */,
+				5C2897071D93886000E07E54 /* Embed App Extensions */,
+				A46FD5B24B058655805203A0 /* Embed Pods Frameworks */,
+				68B4015976B0E70DE68EC4CB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C2897021D93886000E07E54 /* PBXTargetDependency */,
+			);
+			name = EasyTodo;
+			productName = EasyTodo;
+			productReference = 5C7385721D8D07B20065CE41 /* EasyTodo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C7CB9E01D922BD900E26E8B /* EasyTodoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7CB9EA1D922BD900E26E8B /* Build configuration list for PBXNativeTarget "EasyTodoTests" */;
+			buildPhases = (
+				5A3689D46F5610E748977BA1 /* Check Pods Manifest.lock */,
+				5C7CB9DD1D922BD900E26E8B /* Sources */,
+				5C7CB9DE1D922BD900E26E8B /* Frameworks */,
+				5C7CB9DF1D922BD900E26E8B /* Resources */,
+				899F68B96CB1E866D88AC4CC /* Embed Pods Frameworks */,
+				8B2530DEF467AC07CD89F74F /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7CB9E71D922BD900E26E8B /* PBXTargetDependency */,
+			);
+			name = EasyTodoTests;
+			productName = EasyTodoTests;
+			productReference = 5C7CB9E11D922BD900E26E8B /* EasyTodoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C73856A1D8D07B10065CE41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = xyz.pwnlc;
+				TargetAttributes = {
+					5C2896F41D93886000E07E54 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8TVU93GBNX;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					5C7385711D8D07B20065CE41 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8TVU93GBNX;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					5C7CB9E01D922BD900E26E8B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8TVU93GBNX;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5C7385711D8D07B20065CE41;
+					};
+				};
+			};
+			buildConfigurationList = 5C73856D1D8D07B20065CE41 /* Build configuration list for PBXProject "EasyTodo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C7385691D8D07B10065CE41;
+			productRefGroup = 5C7385731D8D07B20065CE41 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C7385711D8D07B20065CE41 /* EasyTodo */,
+				5C7CB9E01D922BD900E26E8B /* EasyTodoTests */,
+				5C2896F41D93886000E07E54 /* EasyTodoTodayExtenstion */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C2896F31D93886000E07E54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2896FF1D93886000E07E54 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7385701D8D07B20065CE41 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7385851D8D07B20065CE41 /* LaunchScreen.storyboard in Resources */,
+				5C7385821D8D07B20065CE41 /* Assets.xcassets in Resources */,
+				5C7385801D8D07B20065CE41 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7CB9DF1D922BD900E26E8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4489568ACEA467906EC1C293 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		44CA7628B69740A0A98141FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5A3689D46F5610E748977BA1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		68B4015976B0E70DE68EC4CB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		899F68B96CB1E866D88AC4CC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B2530DEF467AC07CD89F74F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTests/Pods-EasyTodoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A46FD5B24B058655805203A0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodo/Pods-EasyTodo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B593825D2A6F0659FF85A508 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEC58BCC806B12332532C0D7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EasyTodoTodayExtenstion/Pods-EasyTodoTodayExtenstion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C2896F11D93886000E07E54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C2896FC1D93886000E07E54 /* TodayViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C73856E1D8D07B20065CE41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C73857D1D8D07B20065CE41 /* ViewController.m in Sources */,
+				5C73857A1D8D07B20065CE41 /* AppDelegate.m in Sources */,
+				5C3C15C01D8EC04D004DBEEF /* DoneItemGroup.m in Sources */,
+				5C5A340B1DBF44A000F8188B /* SQLiteHelper.m in Sources */,
+				5C9493241D8EB9FA002A7EB4 /* TodoItem.m in Sources */,
+				5C3C15C61D8ED443004DBEEF /* TodoItemTableViewCell.m in Sources */,
+				5C7385771D8D07B20065CE41 /* main.m in Sources */,
+				5C3C15C31D8EC0BF004DBEEF /* Util.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7CB9DD1D922BD900E26E8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7CB9E41D922BD900E26E8B /* EasyTodoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C2897021D93886000E07E54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C2896F41D93886000E07E54 /* EasyTodoTodayExtenstion */;
+			targetProxy = 5C2897011D93886000E07E54 /* PBXContainerItemProxy */;
+		};
+		5C7CB9E71D922BD900E26E8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7385711D8D07B20065CE41 /* EasyTodo */;
+			targetProxy = 5C7CB9E61D922BD900E26E8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C2896FD1D93886000E07E54 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C2896FE1D93886000E07E54 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		5C73857E1D8D07B20065CE41 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C73857F1D8D07B20065CE41 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C7385831D8D07B20065CE41 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7385841D8D07B20065CE41 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C2897041D93886000E07E54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F2C8A55A6DA36E0C6C87A7E /* Pods-EasyTodoTodayExtenstion.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EasyTodoTodayExtenstion/EasyTodoTodayExtenstion.entitlements;
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.pwnlc.EasyTodo.EasyTodoTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5C2897051D93886000E07E54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F2FA52C4D1968175C7AE9AC /* Pods-EasyTodoTodayExtenstion.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = EasyTodoTodayExtenstion/EasyTodoTodayExtenstion.entitlements;
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTodayExtenstion/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.pwnlc.EasyTodo.EasyTodoTodayExtenstion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5C7385871D8D07B20065CE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5C7385881D8D07B20065CE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C73858A1D8D07B20065CE41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C24BBA64E2E76ABE61B3E854 /* Pods-EasyTodo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyTodo/EasyTodo.entitlements;
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.pwnlc.EasyTodo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5C73858B1D8D07B20065CE41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2AD83C08B57EE991B13E213 /* Pods-EasyTodo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EasyTodo/EasyTodo.entitlements;
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.pwnlc.EasyTodo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5C7CB9E81D922BD900E26E8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79525DEEF1DDD91029F4EABD /* Pods-EasyTodoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.amute.EasyTodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyTodo.app/EasyTodo";
+			};
+			name = Debug;
+		};
+		5C7CB9E91D922BD900E26E8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0D9A674E9E12706956D209C /* Pods-EasyTodoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8TVU93GBNX;
+				INFOPLIST_FILE = EasyTodoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.amute.EasyTodoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyTodo.app/EasyTodo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C2897061D93886000E07E54 /* Build configuration list for PBXNativeTarget "EasyTodoTodayExtenstion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C2897041D93886000E07E54 /* Debug */,
+				5C2897051D93886000E07E54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C73856D1D8D07B20065CE41 /* Build configuration list for PBXProject "EasyTodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7385871D8D07B20065CE41 /* Debug */,
+				5C7385881D8D07B20065CE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7385891D8D07B20065CE41 /* Build configuration list for PBXNativeTarget "EasyTodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C73858A1D8D07B20065CE41 /* Debug */,
+				5C73858B1D8D07B20065CE41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7CB9EA1D922BD900E26E8B /* Build configuration list for PBXNativeTarget "EasyTodoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7CB9E81D922BD900E26E8B /* Debug */,
+				5C7CB9E91D922BD900E26E8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C73856A1D8D07B10065CE41 /* Project object */;
+}
