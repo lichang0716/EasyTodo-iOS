@@ -14,7 +14,7 @@
 + (BOOL)isFirstTimeLaunch {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults boolForKey:FIRST_TIME_LAUNCH]) {
-        [defaults setBool:NO forKey:FIRST_TIME_LAUNCH];
+        [defaults setBool:YES forKey:FIRST_TIME_LAUNCH];
         [defaults synchronize];
         return NO;
     } else {

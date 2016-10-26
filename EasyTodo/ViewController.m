@@ -12,6 +12,7 @@
 #import "TodoItemTableViewCell.h"
 #import "MacroDefine.h"
 #import "Util.h"
+#import "SQLiteHelper.h"
 
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate> {
     NSMutableArray *_todoItemArr;
@@ -19,6 +20,7 @@
     NSString *_itemDescribeInit;
     TodoItem *_itemWantToChange;
     NSArray *_sharedItemArr;
+    SQLiteHelper *sqlHelper;
 }
 
 @end
@@ -34,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"难道 travis ci 也执行这里！");
     [_itemFlagSwitch addTarget:self
                         action:@selector(switchItemFlag)
               forControlEvents:UIControlEventValueChanged];
@@ -56,10 +59,18 @@
     [notificationCenter addObserver:self selector:@selector(applicationWillResignActive) name:UIApplicationWillResignActiveNotification object:nil];
     // 添加 3D touche NewItem
     [notificationCenter addObserver:self selector:@selector(addItem:) name:NEW_ITEM_NOTIFICATION_NAME object:nil];
+    // 在进入后台之前调整位置
+    [notificationCenter addObserver:self selector:@selector(updatePosition:) name:APP_ENTER_BACKGROUND object:nil];
+    //
+    sqlHelper = [[SQLiteHelper alloc] init];
     // 如果是第一次启动，加载初始数据
     if ([Util isFirstTimeLaunch]) {
         [self initData];
         _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
+    } else {
+        NSMutableArray *allItemArr = [sqlHelper getListTodoTable];
+//        NSLog(@"allItemArr = %@", allItemArr);
+        [self initDataWithSQLite:allItemArr];
     }
 }
 
@@ -117,14 +128,18 @@
     _itemDescribeTextField.text = _itemDescribeInit;
 }
 
-- (void)insetNewTodoItem {
+- (void)insertNewTodoItem {
     TodoItem *newTodoItem = [[TodoItem alloc] initWithDescription:_itemDescribeTextField.text];
     [_todoItemArr insertObject:newTodoItem atIndex:0];
     NSInteger lastRow = [_todoItemArr indexOfObject:newTodoItem];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     [_todoItemTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
-    NSLog(@"_todoItemArr = %@", _todoItemArr);
+//    NSLog(@"_todoItemArr = %@", _todoItemArr);
     _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
+    [sqlHelper insertNewItem:newTodoItem];
+//    NSLog(@"newTodoItem = %@", newTodoItem);
+//    NSLog(@"执行这里444444");
+//    [self updatePosition:_todoItemArr];
 }
 
 - (void)modifyTodoItem:(TodoItem *)todoItem {
@@ -136,9 +151,11 @@
 
 - (void)operateItemDescribeTextField {
     if (_itemDescribeInit.length > 0 && ![_itemDescribeTextField.text isEqualToString:_itemDescribeInit]) {
+        [sqlHelper modifyItem:_itemWantToChange newDescription:_itemDescribeTextField.text];
         [self modifyTodoItem:_itemWantToChange];
     } else if(_itemDescribeInit.length == 0 && _itemDescribeTextField.text.length > 0){
-        [self insetNewTodoItem];
+        [self insertNewTodoItem];
+//        NSLog(@"执行这里333333");
     }
 }
 
@@ -204,6 +221,7 @@
         _todoItemTableView.alpha = 1.0;
         _addItemButton.enabled = YES;
         [self operateItemDescribeTextField];
+//        NSLog(@"执行这里111111");
     }
     return YES;
 }
@@ -213,6 +231,7 @@
     _todoItemTableView.alpha = 1.0;
     _addItemButton.enabled = YES;
     [self operateItemDescribeTextField];
+//    NSLog(@"执行这里222222");
 }
 
 #pragma mark right slide mark done
@@ -223,9 +242,11 @@
     if (indexPath) {
         [NSThread sleepForTimeInterval:0.1];
         [self setDoneItemArr:_todoItemArr[indexPath.row]];
+        [sqlHelper finishItem:_todoItemArr[indexPath.row]];
+//        [self updatePosition:_todoItemArr];
         [_todoItemArr removeObjectAtIndex:indexPath.row];
         [_todoItemTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        NSLog(@"_todoItemArr = %@", _todoItemArr);
+//        NSLog(@"_todoItemArr = %@", _todoItemArr);
         _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
     }
 }
@@ -272,9 +293,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [sqlHelper deleteItem:_todoItemArr[indexPath.row]];
     [_todoItemArr removeObjectAtIndex:indexPath.row];
     [_todoItemTableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    NSLog(@"_todoItemArr = %@", _todoItemArr);
+//    NSLog(@"_todoItemArr = %@", _todoItemArr);
     _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
 }
 
@@ -320,7 +342,7 @@
                 [_todoItemArr exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
                 [_todoItemTableView moveRowAtIndexPath:sourceIndexPath toIndexPath:indexPath];
                 sourceIndexPath = indexPath;
-                NSLog(@"_todoItemArr = %@", _todoItemArr);
+//                NSLog(@"_todoItemArr = %@", _todoItemArr);
                 _sharedItemArr = [self getExtenstionItemDescription:_todoItemArr];
             }
         }
@@ -369,44 +391,26 @@
     [_todoItemArr addObject:todoItem3];
     [_todoItemArr addObject:todoItem4];
     [_todoItemArr addObject:todoItem5];
-    // ----------------------------------------------------------
-//    _doneItemArr = [[NSMutableArray alloc] init];
-//    TodoItem *doneItem0 = [[TodoItem alloc] initWithDescription:@"Bitcode 的问题"];
-//    doneItem0.finishTime = 1474203051;
-//    NSMutableArray *doneItemArrObject0 = [[NSMutableArray alloc] initWithObjects:doneItem0, nil];
-//    DoneItemGroup *group0 = [[DoneItemGroup alloc] init];
-//    group0.finishTime = 1474203051;
-//    group0.doneItemsArr = doneItemArrObject0;
-//    
-//    TodoItem *doneItem1 = [[TodoItem alloc] initWithDescription:@"返回键盘不先退出"];
-//    TodoItem *doneItem2 = [[TodoItem alloc] initWithDescription:@"bundle 打包"];
-//    doneItem1.finishTime = 1474116646;
-//    doneItem2.finishTime = 1474116650;
-//    NSMutableArray *doneItemArrObject1 = [[NSMutableArray alloc] initWithObjects:doneItem1, doneItem2, nil];
-//    DoneItemGroup *group1 = [[DoneItemGroup alloc] init];
-//    group1.finishTime = 1474116646;
-//    group1.doneItemsArr = doneItemArrObject1;
-//    
-//    TodoItem *doneItem3 = [[TodoItem alloc] initWithDescription:@"隐藏显示密码字体不同"];
-//    TodoItem *doneItem4 = [[TodoItem alloc] initWithDescription:@"更改 SDK int 时间戳"];
-//    TodoItem *doneItem5 = [[TodoItem alloc] initWithDescription:@"测试测试服务器"];
-//    doneItem3.finishTime = 1474030246;
-//    doneItem4.finishTime = 1474030247;
-//    doneItem5.finishTime = 1474030248;
-//    NSMutableArray *doneItemArrObject2 = [[NSMutableArray alloc] initWithObjects:doneItem3, doneItem4, doneItem5, nil];
-//    DoneItemGroup *group2 = [[DoneItemGroup alloc] init];
-//    group2.finishTime = 1474030246;
-//    group2.doneItemsArr = doneItemArrObject2;
-//    
-//    [_doneItemArr addObject:group0];
-//    [_doneItemArr addObject:group1];
-//    [_doneItemArr addObject:group2];
+}
+
+- (void)initDataWithSQLite:(NSMutableArray *)todoListArr {
+    if (todoListArr.count > 0) {
+        for (TodoItem *todoItem in todoListArr) {
+            if (todoItem.status == 0 && todoItem.position >= 0) {
+                [_todoItemArr insertObject:todoItem atIndex:todoItem.position];
+            } else {
+                [self setDoneItemArr:todoItem];
+            }
+        }
+    }
 }
 
 #pragma mark Application Will Resign Active
 
 - (void)applicationWillResignActive{
+    // 在程序进入后台之前执行这里
     [self saveSharedUserDefaults];
+    [self updatePosition:_todoItemArr];
 }
 
 - (void)saveSharedUserDefaults {
@@ -430,6 +434,11 @@
     } else {
         return EMPTY_STR;
     }
+}
+
+- (void)updatePosition:(NSMutableArray *)todoListArr {
+//    NSLog(@"需要更新的 todoList = %@", todoListArr);
+    [sqlHelper updateListOrder:todoListArr];
 }
 
 @end

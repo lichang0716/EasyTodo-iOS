@@ -18,6 +18,7 @@
         _finishTime = 0;
         _createTime = [Util getCurrentUnixTimeStamp];
         _status = 0;
+        _position = 0;
     }
     return self;
 }
@@ -29,6 +30,7 @@
         _createTime = [Util getCurrentUnixTimeStamp];
         _finishTime = 0;
         _status = 0;
+        _position = 0;
     }
     return self;
 }

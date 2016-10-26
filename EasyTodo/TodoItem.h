@@ -34,6 +34,11 @@
 @property (nonatomic, assign) int status;
 
 /**
+ Todo item 位置顺序。
+ */
+@property (nonatomic, assign) int position;
+
+/**
  带参构造函数
 
  @param itemDescription item 描述
