@@ -36,6 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"难道 travis ci 也执行这里！");
     [_itemFlagSwitch addTarget:self
                         action:@selector(switchItemFlag)
               forControlEvents:UIControlEventValueChanged];
